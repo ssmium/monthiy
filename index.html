@@ -7,17 +7,22 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="월초분배" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
   <title>월초 고정지출 분배보드</title>
-  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
-  <link rel="icon" href="data:image/png;base64,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" />
+
+  <!-- iPhone 홈화면 아이콘 / favicon -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FBFAF7'/%3E%3Crect x='82' y='92' width='348' height='310' rx='44' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Cpath d='M82 136c0-24 20-44 44-44h260c24 0 44 20 44 44v58H82v-58z' fill='%233182F6'/%3E%3Crect x='148' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='330' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='128' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='280' y='228' width='52' height='40' rx='12' fill='%23DDEBFF'/%3E%3Crect x='128' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Cpath d='M310 246a104 104 0 0 1 90 52l-90 52V246z' fill='%233182F6'/%3E%3Cpath d='M400 298a104 104 0 0 1-38 142l-52-90 90-52z' fill='%2326C6B8'/%3E%3Cpath d='M362 440a104 104 0 0 1-142-38l90-52 52 90z' fill='%23F9C74F'/%3E%3Cpath d='M220 402a104 104 0 0 1 90-156v104l-90 52z' fill='%23FF6B6B'/%3E%3Ccircle cx='174' cy='370' r='58' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Ctext x='174' y='392' text-anchor='middle' font-size='70' font-family='Arial,sans-serif' font-weight='800' fill='%23191F28'%3E₩%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FBFAF7'/%3E%3Crect x='82' y='92' width='348' height='310' rx='44' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Cpath d='M82 136c0-24 20-44 44-44h260c24 0 44 20 44 44v58H82v-58z' fill='%233182F6'/%3E%3Crect x='148' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='330' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='128' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='280' y='228' width='52' height='40' rx='12' fill='%23DDEBFF'/%3E%3Crect x='128' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Cpath d='M310 246a104 104 0 0 1 90 52l-90 52V246z' fill='%233182F6'/%3E%3Cpath d='M400 298a104 104 0 0 1-38 142l-52-90 90-52z' fill='%2326C6B8'/%3E%3Cpath d='M362 440a104 104 0 0 1-142-38l90-52 52 90z' fill='%23F9C74F'/%3E%3Cpath d='M220 402a104 104 0 0 1 90-156v104l-90 52z' fill='%23FF6B6B'/%3E%3Ccircle cx='174' cy='370' r='58' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Ctext x='174' y='392' text-anchor='middle' font-size='70' font-family='Arial,sans-serif' font-weight='800' fill='%23191F28'%3E₩%3C/text%3E%3C/svg%3E" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" />
+
   <style>
     :root {
       --bg: #FBFAF7;
       --card: #FFFFFF;
       --ink: #191F28;
       --muted: #6B7684;
-      --sub: #707A86;
+      --sub: #8B95A1;
       --line: #E5E8EC;
       --blue: #3182F6;
       --blue-weak: #E8F2FF;
@@ -27,25 +32,13 @@
       --red-weak: #FFF0F0;
       --yellow: #F59F00;
       --yellow-weak: #FFF6D6;
-
-      /* radius scale */
-      --r-sm: 14px;
-      --r-md: 18px;
-      --r-lg: 24px;
-      --r-xl: 28px;
-
-      /* elevation scale */
-      --e1: 0 4px 12px rgba(25,31,40,.04);
-      --e2: 0 8px 22px rgba(25,31,40,.05);
-      --e3: 0 14px 32px rgba(25,31,40,.08);
-      --e-float: 0 16px 36px rgba(25,31,40,.12);
-      --e-blue: 0 10px 22px rgba(49,130,246,.24);
-      --shadow: var(--e3);
-
+      --shadow: 0 14px 32px rgba(25,31,40,.08);
       --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
@@ -54,16 +47,12 @@
         radial-gradient(circle at top left, rgba(49,130,246,0.09), transparent 28rem),
         var(--bg);
       color: var(--ink);
-      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
       -webkit-font-smoothing: antialiased;
       word-break: keep-all;
     }
 
-    body {
-      padding: 0;
-    }
-
-    button, input, select {
+    button, input {
       font: inherit;
     }
 
@@ -73,18 +62,18 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    input, select {
+    input {
       width: 100%;
       border: 1px solid var(--line);
       background: #F8FAFC;
-      border-radius: var(--r-md);
+      border-radius: 18px;
       padding: 15px 14px;
       color: var(--ink);
       outline: none;
-      transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+      font-weight: 800;
     }
 
-    input:focus, select:focus {
+    input:focus {
       border-color: rgba(49,130,246,.45);
       background: #fff;
       box-shadow: 0 0 0 4px rgba(49,130,246,.10);
@@ -103,6 +92,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
       padding: calc(14px + env(safe-area-inset-top, 0px)) 2px 12px;
       backdrop-filter: blur(18px);
       background: rgba(251,250,247,.78);
@@ -119,27 +109,13 @@
     .app-icon {
       width: 42px;
       height: 42px;
-      border-radius: 13px;
-      background: linear-gradient(160deg, #3182F6, #66A6FF);
-      box-shadow: 0 10px 20px rgba(49,130,246,.24);
-      position: relative;
-      overflow: hidden;
+      border-radius: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FBFAF7'/%3E%3Crect x='82' y='92' width='348' height='310' rx='44' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Cpath d='M82 136c0-24 20-44 44-44h260c24 0 44 20 44 44v58H82v-58z' fill='%233182F6'/%3E%3Crect x='148' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='330' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='128' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='280' y='228' width='52' height='40' rx='12' fill='%23DDEBFF'/%3E%3Crect x='128' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Cpath d='M310 246a104 104 0 0 1 90 52l-90 52V246z' fill='%233182F6'/%3E%3Cpath d='M400 298a104 104 0 0 1-38 142l-52-90 90-52z' fill='%2326C6B8'/%3E%3Cpath d='M362 440a104 104 0 0 1-142-38l90-52 52 90z' fill='%23F9C74F'/%3E%3Cpath d='M220 402a104 104 0 0 1 90-156v104l-90 52z' fill='%23FF6B6B'/%3E%3Ccircle cx='174' cy='370' r='58' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Ctext x='174' y='392' text-anchor='middle' font-size='70' font-family='Arial,sans-serif' font-weight='800' fill='%23191F28'%3E₩%3C/text%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 10px 20px rgba(49,130,246,.18);
       flex: 0 0 auto;
     }
-
-    .app-icon:before,
-    .app-icon:after {
-      content: "";
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.95);
-    }
-
-    .app-icon:before { top: 13px; }
-    .app-icon:after { top: 24px; width: 15px; right: auto; }
 
     .brand h1 {
       margin: 0;
@@ -165,15 +141,15 @@
       background: #fff;
       color: var(--muted);
       border: 1px solid rgba(229,232,236,.92);
-      box-shadow: var(--e1);
+      box-shadow: 0 4px 12px rgba(25,31,40,.04);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       white-space: nowrap;
     }
 
     .month-card {
       margin-top: 18px;
-      border-radius: var(--r-xl);
+      border-radius: 28px;
       background: linear-gradient(160deg, #FFFFFF 0%, #F5F9FF 100%);
       border: 1px solid rgba(229,232,236,.85);
       box-shadow: var(--shadow);
@@ -219,14 +195,14 @@
       color: var(--muted);
       display: grid;
       place-items: center;
-      box-shadow: var(--e1);
-      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(25,31,40,.04);
+      font-weight: 900;
     }
 
     .month-label {
       min-width: 104px;
       text-align: center;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.04em;
     }
 
@@ -255,12 +231,22 @@
       padding: 8px 12px;
       border-radius: 999px;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
       background: var(--blue-weak);
       color: var(--blue);
       margin-top: 16px;
       position: relative;
       z-index: 1;
+    }
+
+    .status-pill.warning {
+      background: var(--yellow-weak);
+      color: var(--yellow);
+    }
+
+    .status-pill.danger {
+      background: var(--red-weak);
+      color: var(--red);
     }
 
     .dot {
@@ -278,7 +264,9 @@
       scrollbar-width: none;
     }
 
-    .tabs::-webkit-scrollbar { display: none; }
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
 
     .tab {
       flex: 0 0 auto;
@@ -288,7 +276,7 @@
       color: var(--muted);
       border: 1px solid var(--line);
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 900;
     }
 
     .tab.active {
@@ -302,7 +290,9 @@
       margin-top: 14px;
     }
 
-    .section.active { display: block; }
+    .section.active {
+      display: block;
+    }
 
     .grid {
       display: grid;
@@ -313,10 +303,10 @@
     .summary-card {
       background: #fff;
       border: 1px solid rgba(229,232,236,.9);
-      border-radius: var(--r-lg);
+      border-radius: 24px;
       padding: 15px;
       min-height: 112px;
-      box-shadow: var(--e2);
+      box-shadow: 0 8px 22px rgba(25,31,40,.05);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -333,7 +323,7 @@
     .label {
       color: var(--sub);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.02em;
     }
 
@@ -365,7 +355,7 @@
       justify-content: space-between;
       color: var(--muted);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
       margin-bottom: 8px;
     }
 
@@ -389,9 +379,9 @@
     .panel {
       background: #fff;
       border: 1px solid rgba(229,232,236,.9);
-      border-radius: var(--r-xl);
+      border-radius: 28px;
       padding: 16px;
-      box-shadow: var(--e2);
+      box-shadow: 0 8px 22px rgba(25,31,40,.05);
       margin-bottom: 12px;
     }
 
@@ -426,7 +416,7 @@
       margin: 0 0 7px;
       color: var(--muted);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 900;
     }
 
     .money-input {
@@ -435,8 +425,6 @@
 
     .money-input input {
       padding-right: 42px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
     }
 
     .money-input span {
@@ -446,7 +434,7 @@
       transform: translateY(-50%);
       color: var(--sub);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
     }
 
     .list {
@@ -459,7 +447,7 @@
       gap: 12px;
       align-items: center;
       padding: 13px;
-      border-radius: var(--r-lg);
+      border-radius: 24px;
       background: #F8FAFC;
       border: 1px solid rgba(229,232,236,.78);
     }
@@ -467,14 +455,14 @@
     .item-icon {
       width: 42px;
       height: 42px;
-      border-radius: var(--r-sm);
+      border-radius: 14px;
       background: #fff;
       display: grid;
       place-items: center;
       color: var(--blue);
-      font-weight: 800;
+      font-weight: 900;
       flex: 0 0 auto;
-      box-shadow: var(--e1);
+      box-shadow: 0 4px 12px rgba(25,31,40,.04);
     }
 
     .item-main {
@@ -483,12 +471,8 @@
     }
 
     .item-name {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      min-width: 0;
       margin: 0;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.04em;
       white-space: nowrap;
       overflow: hidden;
@@ -505,7 +489,7 @@
     }
 
     .item-amount {
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.04em;
       white-space: nowrap;
       font-size: 15px;
@@ -520,14 +504,14 @@
     .mini-btn {
       min-width: 36px;
       height: 34px;
-      border-radius: var(--r-sm);
+      border-radius: 14px;
       display: grid;
       place-items: center;
       background: #fff;
       color: var(--muted);
       border: 1px solid var(--line);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
     }
 
     .mini-btn.danger {
@@ -540,9 +524,9 @@
     .secondary-btn,
     .danger-btn {
       min-height: 50px;
-      border-radius: var(--r-md);
+      border-radius: 18px;
       padding: 0 16px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.03em;
       width: 100%;
     }
@@ -550,7 +534,7 @@
     .primary-btn {
       background: var(--blue);
       color: #fff;
-      box-shadow: var(--e-blue);
+      box-shadow: 0 10px 22px rgba(49,130,246,.24);
     }
 
     .secondary-btn {
@@ -569,24 +553,14 @@
       gap: 9px;
     }
 
-    .button-row.three {
-      grid-template-columns: 1fr;
-    }
-
-    @media (min-width: 560px) {
-      .button-row.three {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
     .notice {
-      border-radius: var(--r-lg);
+      border-radius: 24px;
       padding: 14px;
       background: var(--blue-weak);
       color: #165DBB;
       font-size: 13px;
       line-height: 1.55;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 12px;
     }
 
@@ -619,16 +593,16 @@
       grid-template-columns: 1fr 1fr;
       gap: 9px;
       padding: 10px;
-      border-radius: var(--r-xl);
+      border-radius: 28px;
       background: rgba(255,255,255,.82);
       border: 1px solid rgba(229,232,236,.78);
-      box-shadow: var(--e-float);
+      box-shadow: 0 16px 36px rgba(25,31,40,.12);
       backdrop-filter: blur(18px);
     }
 
     .bottom-actions button {
       min-height: 48px;
-      border-radius: var(--r-md);
+      border-radius: 18px;
       font-size: 14px;
     }
 
@@ -643,22 +617,30 @@
       padding: 14px;
     }
 
-    .sheet-backdrop.show { display: flex; }
+    .sheet-backdrop.show {
+      display: flex;
+    }
 
     .sheet {
       width: min(100%, 720px);
       max-height: min(88vh, 760px);
       overflow: auto;
       background: #fff;
-      border-radius: var(--r-xl) var(--r-xl) var(--r-lg) var(--r-lg);
+      border-radius: 28px 28px 24px 24px;
       padding: 16px;
       box-shadow: 0 -12px 40px rgba(25,31,40,.18);
       animation: rise .18s ease;
     }
 
     @keyframes rise {
-      from { transform: translateY(24px); opacity: .6; }
-      to { transform: translateY(0); opacity: 1; }
+      from {
+        transform: translateY(24px);
+        opacity: .6;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     .sheet-handle {
@@ -675,35 +657,22 @@
       letter-spacing: -0.05em;
     }
 
-    .sheet-form {
-      display: grid;
-      gap: 12px;
-    }
-
-    .sheet-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px;
-      margin-top: 16px;
-    }
-
     .toast {
       position: fixed;
       left: 50%;
-      bottom: calc(88px + var(--safe-bottom));
-      transform: translateX(-50%) translateY(12px);
-      z-index: 80;
-      max-width: min(calc(100% - 32px), 520px);
-      padding: 12px 14px;
-      border-radius: 999px;
+      bottom: calc(90px + var(--safe-bottom));
+      transform: translateX(-50%) translateY(20px);
       background: rgba(25,31,40,.92);
       color: #fff;
-      box-shadow: 0 12px 30px rgba(25,31,40,.18);
-      font-weight: 800;
+      padding: 12px 15px;
+      border-radius: 999px;
       font-size: 13px;
+      font-weight: 800;
       opacity: 0;
       pointer-events: none;
-      transition: opacity .18s ease, transform .18s ease;
+      transition: .2s ease;
+      z-index: 80;
+      white-space: nowrap;
     }
 
     .toast.show {
@@ -711,78 +680,34 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      height: 22px;
-      padding: 0 8px;
-      border-radius: 999px;
-      background: #fff;
-      border: 1px solid var(--line);
-      color: var(--sub);
-      font-size: 11px;
-      font-weight: 800;
-    }
+    @media (max-width: 430px) {
+      .app {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
 
-    .detail-line {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
+      .hero-title {
+        font-size: 24px;
+      }
 
-    .detail-line:last-child { border-bottom: 0; }
+      .summary-card.wide .amount {
+        font-size: 30px;
+      }
 
-    .detail-line strong {
-      color: var(--ink);
-      font-weight: 800;
-      white-space: nowrap;
-    }
+      .item {
+        gap: 9px;
+      }
 
-    .history-card {
-      padding: 14px;
-      border-radius: var(--r-lg);
-      border: 1px solid var(--line);
-      background: #F8FAFC;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .history-card b {
-      display: block;
-      font-size: 15px;
-      letter-spacing: -0.04em;
-    }
-
-    .history-card span {
-      display: block;
-      margin-top: 4px;
-      color: var(--sub);
-      font-size: 12px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    @media (max-width: 380px) {
-      .grid { grid-template-columns: 1fr; }
-      .summary-card.wide .amount { font-size: 29px; }
-      .hero-title { font-size: 23px; }
-      .two-col { grid-template-columns: 1fr; }
+      .item-icon {
+        width: 38px;
+        height: 38px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="app">
+  <div class="app">
     <header class="topbar">
       <div class="brand">
         <div class="app-icon" aria-hidden="true"></div>
@@ -791,739 +716,592 @@
           <p>고정지출 먼저, 남은 돈 분배</p>
         </div>
       </div>
-      <button class="ghost-btn" id="resetBtn" type="button">기본값</button>
+      <button class="ghost-btn" id="resetBtn">기본값</button>
     </header>
 
-    <section class="month-card">
-      <div class="month-row">
-        <div class="month-nav">
-          <button class="round-btn" id="prevMonth" type="button" aria-label="이전 달">‹</button>
-          <div class="month-label" id="monthLabel"></div>
-          <button class="round-btn" id="nextMonth" type="button" aria-label="다음 달">›</button>
-        </div>
-        <button class="ghost-btn" id="copyPrevBtn" type="button">지난달 불러오기</button>
-      </div>
-
-      <h2 class="hero-title" id="heroTitle">이번 달 돈을 먼저 나눠요</h2>
-      <p class="hero-sub" id="heroSub">세후 월급 기준으로 고정지출, 저축, 생활비를 한 화면에서 계산합니다.</p>
-      <div class="status-pill" id="statusPill">
-        <i class="dot"></i>
-        <span id="statusText">계산 중</span>
-      </div>
-    </section>
-
-    <nav class="tabs" aria-label="섹션 이동">
-      <button class="tab active" data-tab="summary" type="button">요약</button>
-      <button class="tab" data-tab="settings" type="button">기준금액</button>
-      <button class="tab" data-tab="fixed" type="button">고정지출</button>
-      <button class="tab" data-tab="buckets" type="button">분배</button>
-      <button class="tab" data-tab="history" type="button">저장내역</button>
-    </nav>
-
-    <section class="section active" id="summary">
-      <div class="grid">
-        <article class="summary-card wide">
-          <div>
-            <div class="label">분배 후 남은 금액</div>
-            <div class="amount" id="leftoverAmount">0원</div>
-            <div class="caption" id="leftoverCaption">고정지출과 분배금 계산 결과입니다.</div>
+    <main>
+      <section class="month-card">
+        <div class="month-row">
+          <div class="month-nav">
+            <button class="round-btn" id="prevMonth">‹</button>
+            <div class="month-label" id="monthLabel">2026년 5월</div>
+            <button class="round-btn" id="nextMonth">›</button>
           </div>
-          <div class="progress-wrap">
-            <div class="progress-head">
-              <span>총 분배율</span>
-              <strong id="usedRatio">0%</strong>
+          <button class="ghost-btn" id="loadPrevBtn">지난달 불러오기</button>
+        </div>
+
+        <h2 class="hero-title" id="heroTitle">2026년 5월 분배</h2>
+        <p class="hero-sub" id="heroSub">고정지출 · 저축 · 분배 가능 금액을 한눈에 확인해요.</p>
+
+        <div class="status-pill" id="statusPill">
+          <span class="dot"></span>
+          <span id="statusText">계산 중</span>
+        </div>
+      </section>
+
+      <nav class="tabs" aria-label="분배보드 탭">
+        <button class="tab active" data-tab="summary">요약</button>
+        <button class="tab" data-tab="base">기준금액</button>
+        <button class="tab" data-tab="fixed">고정지출</button>
+        <button class="tab" data-tab="plans">분배</button>
+        <button class="tab" data-tab="history">저장내역</button>
+      </nav>
+
+      <section class="section active" id="summary">
+        <div class="grid">
+          <article class="summary-card wide">
+            <div>
+              <div class="label">분배 가능 금액</div>
+              <div class="amount" id="availableAmount">0원</div>
+              <div class="caption">월급에서 저축과 고정지출을 제외한 금액이에요.</div>
             </div>
-            <div class="progress" aria-hidden="true"><i id="usedProgress"></i></div>
+            <div class="progress-wrap">
+              <div class="progress-head">
+                <span>분배 사용률</span>
+                <span id="usageRate">0%</span>
+              </div>
+              <div class="progress"><i id="usageBar"></i></div>
+            </div>
+          </article>
+
+          <article class="summary-card">
+            <div class="label">기준금액</div>
+            <div class="amount" id="incomeSummary">0원</div>
+            <div class="caption">이번 달 나눌 돈</div>
+          </article>
+
+          <article class="summary-card">
+            <div class="label">저축/목적자금</div>
+            <div class="amount" id="savingSummary">0원</div>
+            <div class="caption">먼저 빼둘 돈</div>
+          </article>
+
+          <article class="summary-card">
+            <div class="label">고정지출</div>
+            <div class="amount" id="fixedSummary">0원</div>
+            <div class="caption">매달 나가는 돈</div>
+          </article>
+
+          <article class="summary-card">
+            <div class="label">분배 완료</div>
+            <div class="amount" id="plannedSummary">0원</div>
+            <div class="caption">생활비/식비 등</div>
+          </article>
+        </div>
+
+        <div id="summaryNotice" class="notice" style="margin-top:12px;"></div>
+      </section>
+
+      <section class="section" id="base">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3 class="panel-title">기준금액</h3>
+              <p class="panel-desc">월급 또는 이번 달 실제 분배할 통장 잔액을 입력하세요.</p>
+            </div>
+          </div>
+
+          <div class="field-stack">
+            <label>
+              <span class="field-label">이번 달 기준금액</span>
+              <span class="money-input">
+                <input id="incomeInput" inputmode="numeric" />
+                <span>원</span>
+              </span>
+            </label>
+
+            <label>
+              <span class="field-label">저축/목적자금</span>
+              <span class="money-input">
+                <input id="savingInput" inputmode="numeric" />
+                <span>원</span>
+              </span>
+            </label>
           </div>
         </article>
+      </section>
 
-        <article class="summary-card">
-          <div class="label">기준금액</div>
-          <div class="amount" id="incomeAmount">0원</div>
-          <div class="caption">세후 월급 기준</div>
+      <section class="section" id="fixed">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3 class="panel-title">고정지출</h3>
+              <p class="panel-desc">매달 거의 고정적으로 빠져나가는 항목이에요.</p>
+            </div>
+          </div>
+          <div class="list" id="fixedList"></div>
+        </article>
+      </section>
+
+      <section class="section" id="plans">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3 class="panel-title">분배 항목</h3>
+              <p class="panel-desc">식비, 생활비, 고양이비, 예비비처럼 월초에 나눠둘 금액이에요.</p>
+            </div>
+          </div>
+          <div class="list" id="planList"></div>
         </article>
 
-        <article class="summary-card">
-          <div class="label">고정지출</div>
-          <div class="amount" id="fixedAmount">0원</div>
-          <div class="caption" id="fixedCaption">0개 항목</div>
+        <div class="button-row">
+          <button class="secondary-btn" id="autoBalanceBtn">예비비 자동맞춤</button>
+          <button class="secondary-btn" id="clearPlansBtn">분배 0원 처리</button>
+        </div>
+      </section>
+
+      <section class="section" id="history">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3 class="panel-title">저장내역</h3>
+              <p class="panel-desc">월별로 저장한 분배 내역을 확인할 수 있어요.</p>
+            </div>
+          </div>
+          <div class="list" id="historyList"></div>
         </article>
-
-        <article class="summary-card">
-          <div class="label">저축/목적금</div>
-          <div class="amount" id="savingsAmount">0원</div>
-          <div class="caption">월초 선분배</div>
-        </article>
-
-        <article class="summary-card">
-          <div class="label">분배 가능 금액</div>
-          <div class="amount" id="availableAmount">0원</div>
-          <div class="caption">고정지출·저축 제외</div>
-        </article>
-      </div>
-
-      <div class="panel" style="margin-top:12px;">
-        <div class="panel-head">
-          <div>
-            <h3 class="panel-title">이번 달 계산식</h3>
-            <p class="panel-desc">월초에 보고 나눌 금액만 남도록 계산합니다.</p>
-          </div>
-        </div>
-        <div id="formulaBox"></div>
-      </div>
-    </section>
-
-    <section class="section" id="settings">
-      <div class="panel">
-        <div class="panel-head">
-          <div>
-            <h3 class="panel-title">기준금액</h3>
-            <p class="panel-desc">현재 기본값은 세후 월급 2,482,420원, 저축 1,300,000원입니다.</p>
-          </div>
-        </div>
-        <div class="field-stack">
-          <label>
-            <span class="field-label">이번 달 기준금액</span>
-            <span class="money-input">
-              <input id="incomeInput" inputmode="numeric" type="text" />
-              <span>원</span>
-            </span>
-          </label>
-          <label>
-            <span class="field-label">저축 / 목적자금</span>
-            <span class="money-input">
-              <input id="savingsInput" inputmode="numeric" type="text" />
-              <span>원</span>
-            </span>
-          </label>
-          <button class="primary-btn" id="applyBaseBtn" type="button">기준금액 반영</button>
-        </div>
-      </div>
-
-      <div class="notice">
-        고정지출 납부일은 기억된 정보에 없어서 기본값을 비워두었습니다. 항목을 눌러 납부일을 입력하면 월초 확인용으로 같이 보입니다.
-      </div>
-    </section>
-
-    <section class="section" id="fixed">
-      <div class="panel">
-        <div class="panel-head">
-          <div>
-            <h3 class="panel-title">고정지출</h3>
-            <p class="panel-desc">기억된 상세 항목 기준 합계가 자동 계산됩니다.</p>
-          </div>
-          <button class="ghost-btn" id="addFixedBtn" type="button">추가</button>
-        </div>
-        <div class="list" id="fixedList"></div>
-      </div>
-    </section>
-
-    <section class="section" id="buckets">
-      <div class="panel">
-        <div class="panel-head">
-          <div>
-            <h3 class="panel-title">남은 돈 분배</h3>
-            <p class="panel-desc">고정지출과 저축을 뺀 뒤 쓸 돈을 나눕니다.</p>
-          </div>
-          <button class="ghost-btn" id="addBucketBtn" type="button">추가</button>
-        </div>
-        <div class="list" id="bucketList"></div>
-      </div>
-
-      <div class="button-row three">
-        <button class="secondary-btn" id="balanceReserveBtn" type="button">예비비 자동맞춤</button>
-        <button class="secondary-btn" id="clearBucketsBtn" type="button">분배금 비우기</button>
-        <button class="primary-btn" id="saveBtnInline" type="button">이번 달 저장</button>
-      </div>
-    </section>
-
-    <section class="section" id="history">
-      <div class="panel">
-        <div class="panel-head">
-          <div>
-            <h3 class="panel-title">저장내역</h3>
-            <p class="panel-desc">월별 분배 내역을 불러올 수 있습니다.</p>
-          </div>
-        </div>
-        <div class="list" id="historyList"></div>
-      </div>
-    </section>
-  </main>
-
-  <div class="bottom-actions">
-    <button class="secondary-btn" id="quickAddBtn" type="button">항목 추가</button>
-    <button class="primary-btn" id="saveBtn" type="button">분배 저장</button>
+      </section>
+    </main>
   </div>
 
-  <div class="sheet-backdrop" id="sheetBackdrop" role="dialog" aria-modal="true">
+  <div class="bottom-actions">
+    <button class="secondary-btn" id="addBtn">항목 추가</button>
+    <button class="primary-btn" id="saveBtn">분배 저장</button>
+  </div>
+
+  <div class="sheet-backdrop" id="sheetBackdrop">
     <div class="sheet">
       <div class="sheet-handle"></div>
-      <h2 class="sheet-title" id="sheetTitle">항목 추가</h2>
-      <div class="sheet-form">
+      <h3 class="sheet-title" id="sheetTitle">항목 추가</h3>
+
+      <div class="field-stack">
+        <label>
+          <span class="field-label">구분</span>
+          <select id="itemType" style="width:100%; border:1px solid var(--line); background:#F8FAFC; border-radius:18px; padding:15px 14px; color:var(--ink); outline:none; font-weight:800;">
+            <option value="fixed">고정지출</option>
+            <option value="plans">분배</option>
+          </select>
+        </label>
+
         <label>
           <span class="field-label">항목명</span>
-          <input id="itemNameInput" type="text" placeholder="예: 통신비" />
+          <input id="itemName" placeholder="예: 통신비, 식비, 예비비" />
         </label>
+
         <label>
           <span class="field-label">금액</span>
           <span class="money-input">
-            <input id="itemAmountInput" inputmode="numeric" type="text" placeholder="0" />
+            <input id="itemAmount" inputmode="numeric" placeholder="0" />
             <span>원</span>
           </span>
         </label>
-        <div class="two-col" id="fixedOnlyFields">
-          <label>
-            <span class="field-label">분류</span>
-            <select id="itemCategoryInput">
-              <option value="주거">주거</option>
-              <option value="공과금">공과금</option>
-              <option value="통신">통신</option>
-              <option value="교통">교통</option>
-              <option value="보험">보험</option>
-              <option value="구독">구독</option>
-              <option value="기타">기타</option>
-            </select>
-          </label>
-          <label>
-            <span class="field-label">납부일</span>
-            <input id="itemDueInput" inputmode="numeric" type="text" placeholder="예: 25" />
-          </label>
+
+        <label id="dueWrap">
+          <span class="field-label">납부일 / 기준일</span>
+          <input id="itemDue" inputmode="numeric" placeholder="예: 10" />
+        </label>
+
+        <div class="button-row">
+          <button class="secondary-btn" id="cancelSheetBtn">취소</button>
+          <button class="primary-btn" id="submitSheetBtn">저장</button>
         </div>
-      </div>
-      <div class="sheet-actions">
-        <button class="secondary-btn" id="cancelSheetBtn" type="button">취소</button>
-        <button class="primary-btn" id="confirmSheetBtn" type="button">저장</button>
+
+        <button class="danger-btn" id="deleteSheetBtn" style="display:none;">삭제</button>
       </div>
     </div>
   </div>
 
-  <div class="toast" id="toast">저장했습니다.</div>
+  <div class="toast" id="toast">저장했어요</div>
 
   <script>
-    const STORAGE_PREFIX = "sol-monthly-distribution-v2:";
-    const ARCHIVE_KEY = "sol-monthly-distribution-v2:index";
+    const STORAGE_KEY = "monthly-distribution-board-v1";
 
-    const baseline = {
+    const defaultData = {
       income: 2482420,
-      savings: 1300000,
-      fixedItems: [
-        { id: "rent_interest_1", name: "전세이자①", amount: 33750, category: "주거", dueDay: "" },
-        { id: "rent_interest_2", name: "전세이자②", amount: 182690, category: "주거", dueDay: "" },
-        { id: "transport", name: "교통비", amount: 88000, category: "교통", dueDay: "" },
-        { id: "gas", name: "가스비", amount: 40000, category: "공과금", dueDay: "" },
-        { id: "electric", name: "전기세", amount: 30000, category: "공과금", dueDay: "" },
-        { id: "water", name: "수도세", amount: 20000, category: "공과금", dueDay: "" },
-        { id: "phone", name: "통신비", amount: 72190, category: "통신", dueDay: "" },
-        { id: "insurance", name: "보험료", amount: 47000, category: "보험", dueDay: "" }
+      saving: 1300000,
+      fixed: [
+        { id: crypto.randomUUID(), name: "전세이자①", amount: 33750, due: 1 },
+        { id: crypto.randomUUID(), name: "전세이자②", amount: 182690, due: 1 },
+        { id: crypto.randomUUID(), name: "교통비", amount: 88000, due: 1 },
+        { id: crypto.randomUUID(), name: "가스비", amount: 40000, due: 10 },
+        { id: crypto.randomUUID(), name: "전기세", amount: 30000, due: 10 },
+        { id: crypto.randomUUID(), name: "수도세", amount: 20000, due: 10 },
+        { id: crypto.randomUUID(), name: "통신비", amount: 72190, due: 15 },
+        { id: crypto.randomUUID(), name: "보험료", amount: 47000, due: 20 }
       ],
-      buckets: [
-        { id: "food", name: "식비", amount: 250000 },
-        { id: "life", name: "생활비", amount: 220000 },
-        { id: "cat", name: "고양이비", amount: 150000 },
-        { id: "reserve", name: "예비비", amount: 48790 }
+      plans: [
+        { id: crypto.randomUUID(), name: "식비", amount: 250000 },
+        { id: crypto.randomUUID(), name: "생활비", amount: 220000 },
+        { id: crypto.randomUUID(), name: "고양이비", amount: 150000 },
+        { id: crypto.randomUUID(), name: "예비비", amount: 48790 }
       ],
-      savedAt: ""
+      saved: {}
     };
 
-    let currentMonth = getCurrentMonthKey();
-    let state = loadMonth(currentMonth);
-    let sheetMode = { type: "fixed", id: null };
+    let state = loadState();
+    let currentDate = new Date();
+    let editTarget = null;
 
-    const $ = (selector) => document.querySelector(selector);
-    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+    const $ = (id) => document.getElementById(id);
+    const money = (n) => `${Number(n || 0).toLocaleString("ko-KR")}원`;
+    const monthKey = () => `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}`;
 
-    const els = {
-      monthLabel: $("#monthLabel"),
-      heroTitle: $("#heroTitle"),
-      heroSub: $("#heroSub"),
-      statusPill: $("#statusPill"),
-      statusText: $("#statusText"),
-      leftoverAmount: $("#leftoverAmount"),
-      leftoverCaption: $("#leftoverCaption"),
-      usedRatio: $("#usedRatio"),
-      usedProgress: $("#usedProgress"),
-      incomeAmount: $("#incomeAmount"),
-      fixedAmount: $("#fixedAmount"),
-      fixedCaption: $("#fixedCaption"),
-      savingsAmount: $("#savingsAmount"),
-      availableAmount: $("#availableAmount"),
-      formulaBox: $("#formulaBox"),
-      incomeInput: $("#incomeInput"),
-      savingsInput: $("#savingsInput"),
-      fixedList: $("#fixedList"),
-      bucketList: $("#bucketList"),
-      historyList: $("#historyList"),
-      sheetBackdrop: $("#sheetBackdrop"),
-      sheetTitle: $("#sheetTitle"),
-      itemNameInput: $("#itemNameInput"),
-      itemAmountInput: $("#itemAmountInput"),
-      itemCategoryInput: $("#itemCategoryInput"),
-      itemDueInput: $("#itemDueInput"),
-      fixedOnlyFields: $("#fixedOnlyFields"),
-      toast: $("#toast")
-    };
-
-    init();
-
-    function init() {
-      bindEvents();
-      render();
-    }
-
-    function bindEvents() {
-      $("#prevMonth").addEventListener("click", () => changeMonth(-1));
-      $("#nextMonth").addEventListener("click", () => changeMonth(1));
-      $("#copyPrevBtn").addEventListener("click", copyPreviousMonth);
-      $("#resetBtn").addEventListener("click", resetToBaseline);
-      $("#applyBaseBtn").addEventListener("click", applyBaseValues);
-      $("#addFixedBtn").addEventListener("click", () => openSheet("fixed"));
-      $("#addBucketBtn").addEventListener("click", () => openSheet("bucket"));
-      $("#quickAddBtn").addEventListener("click", () => openSheet(getActiveTab() === "buckets" ? "bucket" : "fixed"));
-      $("#saveBtn").addEventListener("click", saveCurrentMonth);
-      $("#saveBtnInline").addEventListener("click", saveCurrentMonth);
-      $("#balanceReserveBtn").addEventListener("click", balanceReserve);
-      $("#clearBucketsBtn").addEventListener("click", clearBuckets);
-      $("#cancelSheetBtn").addEventListener("click", closeSheet);
-      $("#confirmSheetBtn").addEventListener("click", confirmSheet);
-      els.sheetBackdrop.addEventListener("click", (event) => {
-        if (event.target === els.sheetBackdrop) closeSheet();
-      });
-
-      ["incomeInput", "savingsInput", "itemAmountInput"].forEach((id) => {
-        const input = $("#" + id);
-        input.addEventListener("input", () => {
-          const clean = onlyDigits(input.value);
-          input.value = clean ? Number(clean).toLocaleString("ko-KR") : "";
-        });
-      });
-
-      $$(".tab").forEach((tab) => {
-        tab.addEventListener("click", () => {
-          $$(".tab").forEach((t) => t.classList.remove("active"));
-          $$(".section").forEach((s) => s.classList.remove("active"));
-          tab.classList.add("active");
-          $("#" + tab.dataset.tab).classList.add("active");
-          renderHistory();
-        });
-      });
-    }
-
-    function getActiveTab() {
-      return $(".tab.active")?.dataset.tab || "summary";
-    }
-
-    function getCurrentMonthKey() {
-      const now = new Date();
-      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
-    }
-
-    function formatMonth(key) {
-      const [year, month] = key.split("-").map(Number);
-      return `${year}년 ${month}월`;
-    }
-
-    function shiftMonth(key, diff) {
-      const [year, month] = key.split("-").map(Number);
-      const date = new Date(year, month - 1 + diff, 1);
-      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
-    }
-
-    function changeMonth(diff) {
-      saveDraftSilently();
-      currentMonth = shiftMonth(currentMonth, diff);
-      state = loadMonth(currentMonth);
-      render();
-      showToast(formatMonth(currentMonth) + "로 이동했어요.");
-    }
-
-    function cloneBase() {
-      return JSON.parse(JSON.stringify(baseline));
-    }
-
-    function loadMonth(monthKey) {
+    function loadState() {
       try {
-        const saved = localStorage.getItem(STORAGE_PREFIX + monthKey);
-        if (saved) return JSON.parse(saved);
-      } catch (error) {
-        console.warn(error);
-      }
-      return cloneBase();
-    }
-
-    function saveDraftSilently() {
-      try {
-        localStorage.setItem(STORAGE_PREFIX + currentMonth + ":draft", JSON.stringify(state));
-      } catch (error) {
-        console.warn(error);
-      }
-    }
-
-    function saveCurrentMonth() {
-      state.savedAt = new Date().toISOString();
-      localStorage.setItem(STORAGE_PREFIX + currentMonth, JSON.stringify(state));
-      const index = getArchiveIndex();
-      if (!index.includes(currentMonth)) {
-        index.push(currentMonth);
-        index.sort().reverse();
-        localStorage.setItem(ARCHIVE_KEY, JSON.stringify(index));
-      }
-      render();
-      showToast("이번 달 분배 내역을 저장했어요.");
-    }
-
-    function getArchiveIndex() {
-      try {
-        const raw = localStorage.getItem(ARCHIVE_KEY);
-        return raw ? JSON.parse(raw) : [];
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return structuredClone(defaultData);
+        const parsed = JSON.parse(raw);
+        return {
+          ...structuredClone(defaultData),
+          ...parsed,
+          fixed: parsed.fixed || structuredClone(defaultData.fixed),
+          plans: parsed.plans || structuredClone(defaultData.plans),
+          saved: parsed.saved || {}
+        };
       } catch {
-        return [];
+        return structuredClone(defaultData);
       }
     }
 
-    function copyPreviousMonth() {
-      const prevKey = shiftMonth(currentMonth, -1);
-      const saved = localStorage.getItem(STORAGE_PREFIX + prevKey);
-      if (saved) {
-        state = JSON.parse(saved);
-        state.savedAt = "";
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function sum(list) {
+      return list.reduce((acc, item) => acc + Number(item.amount || 0), 0);
+    }
+
+    function calc() {
+      const fixedTotal = sum(state.fixed);
+      const planTotal = sum(state.plans);
+      const available = state.income - state.saving - fixedTotal;
+      const remaining = available - planTotal;
+      const usage = available > 0 ? Math.min(100, Math.max(0, Math.round((planTotal / available) * 100))) : 0;
+      return { fixedTotal, planTotal, available, remaining, usage };
+    }
+
+    function formatInputValue(value) {
+      const onlyNumber = String(value || "").replace(/[^\d]/g, "");
+      return onlyNumber ? Number(onlyNumber).toLocaleString("ko-KR") : "";
+    }
+
+    function numberFromInput(value) {
+      return Number(String(value || "").replace(/[^\d]/g, "")) || 0;
+    }
+
+    function bindMoneyInput(input, onChange) {
+      input.addEventListener("input", () => {
+        const value = numberFromInput(input.value);
+        input.value = formatInputValue(value);
+        onChange(value);
+        saveState();
         render();
-        showToast(formatMonth(prevKey) + " 내역을 불러왔어요.");
-        return;
-      }
-      showToast("지난달 저장내역이 없어 기본값을 유지했어요.");
-    }
-
-    function resetToBaseline() {
-      state = cloneBase();
-      render();
-      showToast("기본값으로 되돌렸어요.");
-    }
-
-    function applyBaseValues() {
-      state.income = parseMoney(els.incomeInput.value);
-      state.savings = parseMoney(els.savingsInput.value);
-      render();
-      showToast("기준금액을 반영했어요.");
-    }
-
-    function getTotals() {
-      const fixedTotal = sum(state.fixedItems);
-      const bucketTotal = sum(state.buckets);
-      const usedTotal = fixedTotal + state.savings + bucketTotal;
-      const available = state.income - fixedTotal - state.savings;
-      const leftover = state.income - usedTotal;
-      const ratio = state.income > 0 ? Math.min(999, Math.round((usedTotal / state.income) * 100)) : 0;
-      return { fixedTotal, bucketTotal, usedTotal, available, leftover, ratio };
-    }
-
-    function sum(items) {
-      return items.reduce((total, item) => total + Number(item.amount || 0), 0);
+      });
     }
 
     function render() {
-      const totals = getTotals();
-      els.monthLabel.textContent = formatMonth(currentMonth);
-      els.heroTitle.textContent = `${formatMonth(currentMonth)} 분배`;
-      els.heroSub.textContent = `고정지출 ${formatWon(totals.fixedTotal)} · 저축 ${formatWon(state.savings)} · 분배 가능 ${formatWon(totals.available)}`;
+      const key = monthKey();
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth() + 1;
+      const { fixedTotal, planTotal, available, remaining, usage } = calc();
 
-      els.incomeAmount.textContent = formatWon(state.income);
-      els.fixedAmount.textContent = formatWon(totals.fixedTotal);
-      els.fixedCaption.textContent = `${state.fixedItems.length}개 항목`;
-      els.savingsAmount.textContent = formatWon(state.savings);
-      els.availableAmount.textContent = formatWon(totals.available);
-      els.leftoverAmount.textContent = formatWon(totals.leftover);
-      els.usedRatio.textContent = totals.ratio + "%";
-      els.usedProgress.style.width = Math.min(100, Math.max(0, totals.ratio)) + "%";
+      $("monthLabel").textContent = `${year}년 ${month}월`;
+      $("heroTitle").textContent = `${year}년 ${month}월 분배`;
+      $("heroSub").textContent = `고정지출 ${money(fixedTotal)} · 저축 ${money(state.saving)} · 분배 가능 ${money(available)}`;
 
-      els.incomeInput.value = formatNumber(state.income);
-      els.savingsInput.value = formatNumber(state.savings);
+      $("incomeInput").value = formatInputValue(state.income);
+      $("savingInput").value = formatInputValue(state.saving);
 
-      renderStatus(totals);
-      renderFormula(totals);
-      renderFixedList();
-      renderBucketList();
+      $("availableAmount").textContent = money(available);
+      $("incomeSummary").textContent = money(state.income);
+      $("savingSummary").textContent = money(state.saving);
+      $("fixedSummary").textContent = money(fixedTotal);
+      $("plannedSummary").textContent = money(planTotal);
+      $("usageRate").textContent = `${usage}%`;
+      $("usageBar").style.width = `${usage}%`;
+
+      const statusPill = $("statusPill");
+      statusPill.className = "status-pill";
+
+      if (remaining < 0) {
+        $("statusText").textContent = "초과";
+        statusPill.classList.add("danger");
+        $("summaryNotice").className = "notice danger";
+        $("summaryNotice").textContent = `분배금이 ${money(Math.abs(remaining))} 초과됐어요. 생활비, 식비, 예비비 중 일부 조정이 필요해요.`;
+      } else if (remaining <= 50000) {
+        $("statusText").textContent = "거의 딱 맞음";
+        statusPill.classList.add("warning");
+        $("summaryNotice").className = "notice warning";
+        $("summaryNotice").textContent = `분배 후 남은 금액은 ${money(remaining)}이에요. 변동지출이 생기면 빠듯할 수 있어요.`;
+      } else {
+        $("statusText").textContent = "안정";
+        $("summaryNotice").className = "notice";
+        $("summaryNotice").textContent = `분배 후 ${money(remaining)}이 남아요. 남은 금액은 예비비 또는 추가 저축으로 조정할 수 있어요.`;
+      }
+
+      renderList("fixedList", state.fixed, "fixed");
+      renderList("planList", state.plans, "plans");
       renderHistory();
     }
 
-    function renderStatus(totals) {
-      const pill = els.statusPill;
-      pill.style.background = "var(--blue-weak)";
-      pill.style.color = "var(--blue)";
+    function renderList(targetId, list, type) {
+      const target = $(targetId);
+      target.innerHTML = "";
 
-      if (totals.leftover < 0) {
-        pill.style.background = "var(--red-weak)";
-        pill.style.color = "var(--red)";
-        els.statusText.textContent = `${formatWon(Math.abs(totals.leftover))} 초과`;
-        els.leftoverCaption.textContent = "분배 금액이 기준금액보다 큽니다. 생활비나 예비비를 조정하세요.";
+      if (!list.length) {
+        target.innerHTML = `<div class="empty">등록된 항목이 없어요.</div>`;
         return;
       }
 
-      if (totals.leftover <= 30000) {
-        pill.style.background = "var(--yellow-weak)";
-        pill.style.color = "var(--yellow)";
-        els.statusText.textContent = "거의 딱 맞음";
-        els.leftoverCaption.textContent = "남는 돈이 적습니다. 예비비를 조금 남겨두는 구성이 안전합니다.";
-        return;
-      }
-
-      pill.style.background = "var(--green-weak)";
-      pill.style.color = "var(--green)";
-      els.statusText.textContent = "분배 가능";
-      els.leftoverCaption.textContent = `${formatWon(totals.leftover)} 여유가 남습니다.`;
-    }
-
-    function renderFormula(totals) {
-      const dangerClass = totals.leftover < 0 ? "danger" : (totals.leftover <= 30000 ? "warning" : "");
-      els.formulaBox.innerHTML = `
-        <div class="notice ${dangerClass}">
-          기준금액 ${formatWon(state.income)} - 고정지출 ${formatWon(totals.fixedTotal)} - 저축 ${formatWon(state.savings)}
-          = 분배 가능 금액 <strong>${formatWon(totals.available)}</strong>
-        </div>
-        <div class="detail-line"><span>분배 항목 합계</span><strong>${formatWon(totals.bucketTotal)}</strong></div>
-        <div class="detail-line"><span>최종 잔액</span><strong>${formatWon(totals.leftover)}</strong></div>
-      `;
-    }
-
-    function renderFixedList() {
-      if (!state.fixedItems.length) {
-        els.fixedList.innerHTML = `<div class="empty">고정지출 항목이 없습니다.<br>추가 버튼으로 항목을 넣어주세요.</div>`;
-        return;
-      }
-
-      els.fixedList.innerHTML = state.fixedItems
-        .map((item) => `
-          <article class="item">
-            <div class="item-icon">${iconForCategory(item.category)}</div>
-            <div class="item-main">
-              <p class="item-name">${escapeHtml(item.name)}</p>
-              <div class="item-meta">
-                <span class="pill">${escapeHtml(item.category || "기타")}</span>
-                <span>${item.dueDay ? `${escapeHtml(item.dueDay)}일 납부` : "납부일 미입력"}</span>
-              </div>
+      list.forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerHTML = `
+          <div class="item-icon">${type === "fixed" ? "고" : "분"}</div>
+          <div class="item-main">
+            <p class="item-name">${item.name}</p>
+            <div class="item-meta">
+              ${type === "fixed" ? `<span>매월 ${item.due || "-"}일</span>` : `<span>월초 분배</span>`}
             </div>
-            <div class="item-amount">${formatWon(item.amount)}</div>
-            <div class="item-actions">
-              <button class="mini-btn" type="button" onclick="openSheet('fixed','${item.id}')">수정</button>
-              <button class="mini-btn danger" type="button" onclick="removeItem('fixed','${item.id}')">삭제</button>
-            </div>
-          </article>
-        `).join("");
-    }
+          </div>
+          <div class="item-amount">${money(item.amount)}</div>
+          <div class="item-actions">
+            <button class="mini-btn" data-edit="${item.id}" data-type="${type}">수정</button>
+          </div>
+        `;
+        target.appendChild(div);
+      });
 
-    function renderBucketList() {
-      const totals = getTotals();
-      if (!state.buckets.length) {
-        els.bucketList.innerHTML = `<div class="empty">분배 항목이 없습니다.<br>생활비, 식비, 고양이비 등을 추가하세요.</div>`;
-        return;
-      }
-
-      els.bucketList.innerHTML = `
-        <div class="notice ${totals.leftover < 0 ? "danger" : ""}">
-          분배 가능 금액은 <strong>${formatWon(totals.available)}</strong>이고, 현재 분배 합계는 <strong>${formatWon(totals.bucketTotal)}</strong>입니다.
-        </div>
-        ${state.buckets.map((item) => `
-          <article class="item">
-            <div class="item-icon">₩</div>
-            <div class="item-main">
-              <p class="item-name">${escapeHtml(item.name)}</p>
-              <div class="item-meta">
-                <span class="pill">분배금</span>
-              </div>
-            </div>
-            <div class="item-amount">${formatWon(item.amount)}</div>
-            <div class="item-actions">
-              <button class="mini-btn" type="button" onclick="openSheet('bucket','${item.id}')">수정</button>
-              <button class="mini-btn danger" type="button" onclick="removeItem('bucket','${item.id}')">삭제</button>
-            </div>
-          </article>
-        `).join("")}
-      `;
+      target.querySelectorAll("[data-edit]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          openSheet(btn.dataset.type, btn.dataset.edit);
+        });
+      });
     }
 
     function renderHistory() {
-      const index = getArchiveIndex();
-      if (!index.length) {
-        els.historyList.innerHTML = `<div class="empty">아직 저장된 분배 내역이 없습니다.<br>분배 저장 버튼을 누르면 여기에 표시됩니다.</div>`;
+      const target = $("historyList");
+      const entries = Object.entries(state.saved).sort((a, b) => b[0].localeCompare(a[0]));
+      target.innerHTML = "";
+
+      if (!entries.length) {
+        target.innerHTML = `<div class="empty">아직 저장한 월별 분배 내역이 없어요.</div>`;
         return;
       }
 
-      els.historyList.innerHTML = index.map((key) => {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_PREFIX + key) || "{}");
-        const fixedTotal = sum(saved.fixedItems || []);
-        const bucketTotal = sum(saved.buckets || []);
-        const leftover = Number(saved.income || 0) - fixedTotal - Number(saved.savings || 0) - bucketTotal;
-        return `
-          <article class="history-card">
-            <div>
-              <b>${formatMonth(key)}</b>
-              <span>잔액 ${formatWon(leftover)} · 저장 ${saved.savedAt ? formatSavedDate(saved.savedAt) : "날짜 없음"}</span>
+      entries.forEach(([key, data]) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerHTML = `
+          <div class="item-icon">월</div>
+          <div class="item-main">
+            <p class="item-name">${key}</p>
+            <div class="item-meta">
+              <span>고정 ${money(data.fixedTotal)}</span>
+              <span>분배 ${money(data.planTotal)}</span>
             </div>
-            <button class="mini-btn" type="button" onclick="loadHistory('${key}')">열기</button>
-          </article>
+          </div>
+          <div class="item-amount">${money(data.remaining)}</div>
         `;
-      }).join("");
+        target.appendChild(div);
+      });
     }
 
-    function openSheet(type, id = null) {
-      sheetMode = { type, id };
-      const isFixed = type === "fixed";
-      const list = isFixed ? state.fixedItems : state.buckets;
-      const item = id ? list.find((x) => x.id === id) : null;
+    function openSheet(type = "fixed", id = null) {
+      editTarget = { type, id };
+      const list = type === "fixed" ? state.fixed : state.plans;
+      const item = id ? list.find((v) => v.id === id) : null;
 
-      els.sheetTitle.textContent = `${isFixed ? "고정지출" : "분배 항목"} ${id ? "수정" : "추가"}`;
-      els.fixedOnlyFields.style.display = isFixed ? "grid" : "none";
-      els.itemNameInput.value = item?.name || "";
-      els.itemAmountInput.value = item ? formatNumber(item.amount) : "";
-      els.itemCategoryInput.value = item?.category || "기타";
-      els.itemDueInput.value = item?.dueDay || "";
-      els.sheetBackdrop.classList.add("show");
-      setTimeout(() => els.itemNameInput.focus(), 50);
+      $("sheetTitle").textContent = id ? "항목 수정" : "항목 추가";
+      $("itemType").value = type;
+      $("itemType").disabled = !!id;
+      $("itemName").value = item?.name || "";
+      $("itemAmount").value = item ? formatInputValue(item.amount) : "";
+      $("itemDue").value = item?.due || "";
+      $("dueWrap").style.display = type === "fixed" ? "block" : "none";
+      $("deleteSheetBtn").style.display = id ? "block" : "none";
+      $("sheetBackdrop").classList.add("show");
     }
 
     function closeSheet() {
-      els.sheetBackdrop.classList.remove("show");
+      $("sheetBackdrop").classList.remove("show");
+      editTarget = null;
     }
 
-    function confirmSheet() {
-      const name = els.itemNameInput.value.trim();
-      const amount = parseMoney(els.itemAmountInput.value);
-      const category = els.itemCategoryInput.value;
-      const dueDay = onlyDigits(els.itemDueInput.value).slice(0, 2);
+    function toast(message) {
+      const el = $("toast");
+      el.textContent = message;
+      el.classList.add("show");
+      setTimeout(() => el.classList.remove("show"), 1600);
+    }
 
-      if (!name) return showToast("항목명을 입력해주세요.");
-      if (amount < 0) return showToast("금액을 확인해주세요.");
+    function saveItemFromSheet() {
+      const type = $("itemType").value;
+      const name = $("itemName").value.trim();
+      const amount = numberFromInput($("itemAmount").value);
+      const due = Number($("itemDue").value) || "";
 
-      const target = sheetMode.type === "fixed" ? state.fixedItems : state.buckets;
-      const exists = sheetMode.id ? target.find((x) => x.id === sheetMode.id) : null;
-
-      if (exists) {
-        exists.name = name;
-        exists.amount = amount;
-        if (sheetMode.type === "fixed") {
-          exists.category = category;
-          exists.dueDay = dueDay;
-        }
-      } else {
-        const newItem = { id: makeId(), name, amount };
-        if (sheetMode.type === "fixed") {
-          newItem.category = category;
-          newItem.dueDay = dueDay;
-        }
-        target.push(newItem);
+      if (!name) {
+        toast("항목명을 입력해 주세요");
+        return;
       }
 
+      const list = type === "fixed" ? state.fixed : state.plans;
+
+      if (editTarget?.id) {
+        const item = list.find((v) => v.id === editTarget.id);
+        if (item) {
+          item.name = name;
+          item.amount = amount;
+          if (type === "fixed") item.due = due;
+        }
+      } else {
+        const newItem = { id: crypto.randomUUID(), name, amount };
+        if (type === "fixed") newItem.due = due;
+        list.push(newItem);
+      }
+
+      saveState();
+      render();
       closeSheet();
-      render();
-      showToast("항목을 반영했어요.");
+      toast("저장했어요");
     }
 
-    function removeItem(type, id) {
-      if (type === "fixed") {
-        state.fixedItems = state.fixedItems.filter((item) => item.id !== id);
-      } else {
-        state.buckets = state.buckets.filter((item) => item.id !== id);
+    function deleteItemFromSheet() {
+      if (!editTarget?.id) return;
+      const list = editTarget.type === "fixed" ? state.fixed : state.plans;
+      const index = list.findIndex((v) => v.id === editTarget.id);
+      if (index >= 0) list.splice(index, 1);
+
+      saveState();
+      render();
+      closeSheet();
+      toast("삭제했어요");
+    }
+
+    function saveMonth() {
+      const { fixedTotal, planTotal, available, remaining } = calc();
+      state.saved[monthKey()] = {
+        income: state.income,
+        saving: state.saving,
+        fixed: structuredClone(state.fixed),
+        plans: structuredClone(state.plans),
+        fixedTotal,
+        planTotal,
+        available,
+        remaining,
+        savedAt: new Date().toISOString()
+      };
+      saveState();
+      render();
+      toast("이번 달 분배를 저장했어요");
+    }
+
+    function loadPrevMonth() {
+      const prev = new Date(currentDate);
+      prev.setMonth(prev.getMonth() - 1);
+      const key = `${prev.getFullYear()}-${String(prev.getMonth() + 1).padStart(2, "0")}`;
+      const saved = state.saved[key];
+
+      if (!saved) {
+        toast("지난달 저장내역이 없어요");
+        return;
       }
+
+      state.income = saved.income;
+      state.saving = saved.saving;
+      state.fixed = structuredClone(saved.fixed);
+      state.plans = structuredClone(saved.plans);
+      saveState();
       render();
-      showToast("항목을 삭제했어요.");
+      toast("지난달 항목을 불러왔어요");
     }
 
-    function loadHistory(key) {
-      saveDraftSilently();
-      currentMonth = key;
-      state = loadMonth(key);
-      $$(".tab").forEach((t) => t.classList.remove("active"));
-      $$(".section").forEach((s) => s.classList.remove("active"));
-      $(`.tab[data-tab="summary"]`).classList.add("active");
-      $("#summary").classList.add("active");
-      render();
-      showToast(formatMonth(key) + " 내역을 열었어요.");
-    }
-
-    function balanceReserve() {
-      const totals = getTotals();
-      const reserve = state.buckets.find((item) => item.name.includes("예비"));
-      const otherBucketTotal = state.buckets
-        .filter((item) => item !== reserve)
-        .reduce((sum, item) => sum + Number(item.amount || 0), 0);
-      const nextReserve = state.income - totals.fixedTotal - state.savings - otherBucketTotal;
+    function autoBalanceReserve() {
+      const { available } = calc();
+      const reserve = state.plans.find((v) => v.name.includes("예비"));
+      const others = state.plans.filter((v) => v !== reserve);
+      const otherTotal = sum(others);
+      const balanced = Math.max(0, available - otherTotal);
 
       if (reserve) {
-        reserve.amount = Math.max(0, nextReserve);
+        reserve.amount = balanced;
       } else {
-        state.buckets.push({ id: makeId(), name: "예비비", amount: Math.max(0, nextReserve) });
+        state.plans.push({ id: crypto.randomUUID(), name: "예비비", amount: balanced });
       }
 
+      saveState();
       render();
-      showToast("남는 금액을 예비비로 맞췄어요.");
+      toast("예비비를 자동으로 맞췄어요");
     }
 
-    function clearBuckets() {
-      state.buckets = state.buckets.map((item) => ({ ...item, amount: 0 }));
+    function resetDefault() {
+      if (!confirm("기본값으로 초기화할까요? 저장내역은 유지됩니다.")) return;
+      const saved = state.saved;
+      state = structuredClone(defaultData);
+      state.saved = saved;
+      saveState();
       render();
-      showToast("분배금을 0원으로 비웠어요.");
+      toast("기본값으로 초기화했어요");
     }
 
-    function onlyDigits(value) {
-      return String(value || "").replace(/[^\d]/g, "");
-    }
+    document.querySelectorAll(".tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach((v) => v.classList.remove("active"));
+        document.querySelectorAll(".section").forEach((v) => v.classList.remove("active"));
+        tab.classList.add("active");
+        $(tab.dataset.tab).classList.add("active");
+      });
+    });
 
-    function parseMoney(value) {
-      const clean = onlyDigits(value);
-      return clean ? Number(clean) : 0;
-    }
+    bindMoneyInput($("incomeInput"), (value) => state.income = value);
+    bindMoneyInput($("savingInput"), (value) => state.saving = value);
 
-    function formatNumber(value) {
-      return Number(value || 0).toLocaleString("ko-KR");
-    }
+    $("prevMonth").addEventListener("click", () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      render();
+    });
 
-    function formatWon(value) {
-      const num = Number(value || 0);
-      const sign = num < 0 ? "-" : "";
-      return sign + Math.abs(num).toLocaleString("ko-KR") + "원";
-    }
+    $("nextMonth").addEventListener("click", () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      render();
+    });
 
-    function formatSavedDate(iso) {
-      const date = new Date(iso);
-      if (Number.isNaN(date.getTime())) return "날짜 없음";
-      return `${date.getMonth() + 1}/${date.getDate()} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
-    }
+    $("addBtn").addEventListener("click", () => {
+      const activeTab = document.querySelector(".tab.active")?.dataset.tab;
+      openSheet(activeTab === "plans" ? "plans" : "fixed");
+    });
 
-    function iconForCategory(category) {
-      const map = {
-        "주거": "🏠",
-        "공과금": "💡",
-        "통신": "📱",
-        "교통": "🚇",
-        "보험": "🛡️",
-        "구독": "◌",
-        "기타": "₩"
-      };
-      return map[category] || "₩";
-    }
+    $("saveBtn").addEventListener("click", saveMonth);
+    $("loadPrevBtn").addEventListener("click", loadPrevMonth);
+    $("resetBtn").addEventListener("click", resetDefault);
+    $("autoBalanceBtn").addEventListener("click", autoBalanceReserve);
 
-    function makeId() {
-      return "id_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 8);
-    }
+    $("clearPlansBtn").addEventListener("click", () => {
+      if (!confirm("분배 항목 금액을 모두 0원으로 바꿀까요?")) return;
+      state.plans.forEach((item) => item.amount = 0);
+      saveState();
+      render();
+      toast("분배 항목을 0원으로 바꿨어요");
+    });
 
-    function showToast(message) {
-      els.toast.textContent = message;
-      els.toast.classList.add("show");
-      clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => els.toast.classList.remove("show"), 1800);
-    }
+    $("cancelSheetBtn").addEventListener("click", closeSheet);
+    $("submitSheetBtn").addEventListener("click", saveItemFromSheet);
+    $("deleteSheetBtn").addEventListener("click", deleteItemFromSheet);
 
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
+    $("sheetBackdrop").addEventListener("click", (e) => {
+      if (e.target.id === "sheetBackdrop") closeSheet();
+    });
 
-    window.openSheet = openSheet;
-    window.removeItem = removeItem;
-    window.loadHistory = loadHistory;
+    $("itemType").addEventListener("change", () => {
+      $("dueWrap").style.display = $("itemType").value === "fixed" ? "block" : "none";
+    });
+
+    $("itemAmount").addEventListener("input", () => {
+      $("itemAmount").value = formatInputValue($("itemAmount").value);
+    });
+
+    render();
   </script>
 </body>
 </html>

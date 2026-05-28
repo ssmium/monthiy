@@ -1,0 +1,1515 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FBFAF7" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="월초분배" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>월초 고정지출 분배보드</title>
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <link rel="icon" href="data:image/png;base64,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" />
+  <style>
+    :root {
+      --bg: #FBFAF7;
+      --card: #FFFFFF;
+      --ink: #191F28;
+      --muted: #6B7684;
+      --sub: #8B95A1;
+      --line: #E5E8EC;
+      --blue: #3182F6;
+      --blue-weak: #E8F2FF;
+      --green: #00A36C;
+      --green-weak: #E6F7F1;
+      --red: #E5484D;
+      --red-weak: #FFF0F0;
+      --yellow: #F59F00;
+      --yellow-weak: #FFF6D6;
+      --shadow: 0 14px 32px rgba(25, 31, 40, 0.08);
+      --radius: 26px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at top left, rgba(49,130,246,0.09), transparent 28rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+
+    body {
+      padding: 0;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #F8FAFC;
+      border-radius: 18px;
+      padding: 15px 14px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: rgba(49,130,246,.45);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(49,130,246,.10);
+    }
+
+    .app {
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: 0 16px calc(96px + var(--safe-bottom));
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: calc(14px + env(safe-area-inset-top, 0px)) 2px 12px;
+      backdrop-filter: blur(18px);
+      background: rgba(251,250,247,.78);
+      border-bottom: 1px solid rgba(229,232,236,.6);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .app-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: linear-gradient(160deg, #3182F6, #66A6FF);
+      box-shadow: 0 10px 20px rgba(49,130,246,.24);
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .app-icon:before,
+    .app-icon:after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.95);
+    }
+
+    .app-icon:before { top: 13px; }
+    .app-icon:after { top: 24px; width: 15px; right: auto; }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+    }
+
+    .brand p {
+      margin: 3px 0 0;
+      font-size: 12px;
+      color: var(--sub);
+      letter-spacing: -0.02em;
+    }
+
+    .ghost-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 13px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      border: 1px solid rgba(229,232,236,.92);
+      box-shadow: 0 4px 12px rgba(25,31,40,.04);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .month-card {
+      margin-top: 18px;
+      border-radius: 30px;
+      background: linear-gradient(160deg, #FFFFFF 0%, #F5F9FF 100%);
+      border: 1px solid rgba(229,232,236,.85);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .month-card:after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -80px;
+      top: -70px;
+      background: rgba(49,130,246,.12);
+      border-radius: 50%;
+    }
+
+    .month-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .month-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F2F4F6;
+      border-radius: 999px;
+      padding: 5px;
+    }
+
+    .round-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--muted);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 12px rgba(25,31,40,.04);
+      font-weight: 900;
+    }
+
+    .month-label {
+      min-width: 104px;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-title {
+      position: relative;
+      z-index: 1;
+      margin: 22px 0 6px;
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: -0.06em;
+    }
+
+    .hero-sub {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      background: var(--blue-weak);
+      color: var(--blue);
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 16px 1px 4px;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab {
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .tab.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .section {
+      display: none;
+      margin-top: 14px;
+    }
+
+    .section.active { display: block; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .summary-card {
+      background: #fff;
+      border: 1px solid rgba(229,232,236,.9);
+      border-radius: 24px;
+      padding: 15px;
+      min-height: 112px;
+      box-shadow: 0 8px 22px rgba(25,31,40,.045);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .summary-card.wide {
+      grid-column: 1 / -1;
+      min-height: 132px;
+      background:
+        linear-gradient(160deg, rgba(49,130,246,.10), rgba(255,255,255,.96)),
+        #fff;
+    }
+
+    .label {
+      color: var(--sub);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .amount {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .summary-card.wide .amount {
+      font-size: 34px;
+    }
+
+    .caption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .progress-wrap {
+      margin-top: 16px;
+    }
+
+    .progress-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      background: #E9EEF5;
+      overflow: hidden;
+    }
+
+    .progress > i {
+      display: block;
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #3182F6, #7DB5FF);
+      transition: width .25s ease;
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid rgba(229,232,236,.9);
+      border-radius: 28px;
+      padding: 16px;
+      box-shadow: 0 8px 24px rgba(25,31,40,.045);
+      margin-bottom: 12px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.05em;
+    }
+
+    .panel-desc {
+      margin: 4px 0 0;
+      color: var(--sub);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .field-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .field-label {
+      display: block;
+      margin: 0 0 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .money-input {
+      position: relative;
+    }
+
+    .money-input input {
+      padding-right: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .money-input span {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--sub);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+      border-radius: 22px;
+      background: #F8FAFC;
+      border: 1px solid rgba(229,232,236,.78);
+    }
+
+    .item-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-weight: 900;
+      flex: 0 0 auto;
+      box-shadow: 0 4px 12px rgba(25,31,40,.04);
+    }
+
+    .item-main {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .item-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-meta {
+      margin-top: 4px;
+      color: var(--sub);
+      font-size: 12px;
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .item-amount {
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
+      font-size: 15px;
+    }
+
+    .item-actions {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+
+    .mini-btn {
+      min-width: 36px;
+      height: 34px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .mini-btn.danger {
+      color: var(--red);
+      background: var(--red-weak);
+      border-color: #FFD6D6;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .danger-btn {
+      min-height: 50px;
+      border-radius: 18px;
+      padding: 0 16px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      width: 100%;
+    }
+
+    .primary-btn {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(49,130,246,.25);
+    }
+
+    .secondary-btn {
+      background: #F2F4F6;
+      color: var(--ink);
+    }
+
+    .danger-btn {
+      background: var(--red-weak);
+      color: var(--red);
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .button-row.three {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 560px) {
+      .button-row.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .notice {
+      border-radius: 24px;
+      padding: 14px;
+      background: var(--blue-weak);
+      color: #165DBB;
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .notice.warning {
+      background: var(--yellow-weak);
+      color: #8A5A00;
+    }
+
+    .notice.danger {
+      background: var(--red-weak);
+      color: #B4232A;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 28px 10px;
+      color: var(--sub);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .bottom-actions {
+      position: fixed;
+      left: 50%;
+      bottom: calc(14px + var(--safe-bottom));
+      z-index: 25;
+      transform: translateX(-50%);
+      width: min(calc(100% - 32px), 688px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      padding: 10px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(229,232,236,.78);
+      box-shadow: 0 16px 36px rgba(25,31,40,.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .bottom-actions button {
+      min-height: 48px;
+      border-radius: 18px;
+      font-size: 14px;
+    }
+
+    .sheet-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(25,31,40,.32);
+      z-index: 50;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 14px;
+    }
+
+    .sheet-backdrop.show { display: flex; }
+
+    .sheet {
+      width: min(100%, 720px);
+      max-height: min(88vh, 760px);
+      overflow: auto;
+      background: #fff;
+      border-radius: 30px 30px 24px 24px;
+      padding: 16px;
+      box-shadow: 0 -12px 40px rgba(25,31,40,.18);
+      animation: rise .18s ease;
+    }
+
+    @keyframes rise {
+      from { transform: translateY(24px); opacity: .6; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .sheet-handle {
+      width: 42px;
+      height: 5px;
+      background: #D6DCE3;
+      border-radius: 999px;
+      margin: 2px auto 14px;
+    }
+
+    .sheet-title {
+      margin: 0 0 14px;
+      font-size: 21px;
+      letter-spacing: -0.05em;
+    }
+
+    .sheet-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .sheet-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 16px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(88px + var(--safe-bottom));
+      transform: translateX(-50%) translateY(12px);
+      z-index: 80;
+      max-width: min(calc(100% - 32px), 520px);
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: rgba(25,31,40,.92);
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(25,31,40,.18);
+      font-weight: 800;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      height: 22px;
+      padding: 0 8px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--sub);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .detail-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .detail-line:last-child { border-bottom: 0; }
+
+    .detail-line strong {
+      color: var(--ink);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .history-card {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: #F8FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .history-card b {
+      display: block;
+      font-size: 15px;
+      letter-spacing: -0.04em;
+    }
+
+    .history-card span {
+      display: block;
+      margin-top: 4px;
+      color: var(--sub);
+      font-size: 12px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 380px) {
+      .grid { grid-template-columns: 1fr; }
+      .summary-card.wide .amount { font-size: 29px; }
+      .hero-title { font-size: 23px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="app-icon" aria-hidden="true"></div>
+        <div>
+          <h1>월초 분배보드</h1>
+          <p>고정지출 먼저, 남은 돈 분배</p>
+        </div>
+      </div>
+      <button class="ghost-btn" id="resetBtn" type="button">기본값</button>
+    </header>
+
+    <section class="month-card">
+      <div class="month-row">
+        <div class="month-nav">
+          <button class="round-btn" id="prevMonth" type="button" aria-label="이전 달">‹</button>
+          <div class="month-label" id="monthLabel"></div>
+          <button class="round-btn" id="nextMonth" type="button" aria-label="다음 달">›</button>
+        </div>
+        <button class="ghost-btn" id="copyPrevBtn" type="button">지난달 불러오기</button>
+      </div>
+
+      <h2 class="hero-title" id="heroTitle">이번 달 돈을 먼저 나눠요</h2>
+      <p class="hero-sub" id="heroSub">세후 월급 기준으로 고정지출, 저축, 생활비를 한 화면에서 계산합니다.</p>
+      <div class="status-pill" id="statusPill">
+        <i class="dot"></i>
+        <span id="statusText">계산 중</span>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="섹션 이동">
+      <button class="tab active" data-tab="summary" type="button">요약</button>
+      <button class="tab" data-tab="settings" type="button">기준금액</button>
+      <button class="tab" data-tab="fixed" type="button">고정지출</button>
+      <button class="tab" data-tab="buckets" type="button">분배</button>
+      <button class="tab" data-tab="history" type="button">저장내역</button>
+    </nav>
+
+    <section class="section active" id="summary">
+      <div class="grid">
+        <article class="summary-card wide">
+          <div>
+            <div class="label">분배 후 남은 금액</div>
+            <div class="amount" id="leftoverAmount">0원</div>
+            <div class="caption" id="leftoverCaption">고정지출과 분배금 계산 결과입니다.</div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-head">
+              <span>총 분배율</span>
+              <strong id="usedRatio">0%</strong>
+            </div>
+            <div class="progress" aria-hidden="true"><i id="usedProgress"></i></div>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="label">기준금액</div>
+          <div class="amount" id="incomeAmount">0원</div>
+          <div class="caption">세후 월급 기준</div>
+        </article>
+
+        <article class="summary-card">
+          <div class="label">고정지출</div>
+          <div class="amount" id="fixedAmount">0원</div>
+          <div class="caption" id="fixedCaption">0개 항목</div>
+        </article>
+
+        <article class="summary-card">
+          <div class="label">저축/목적금</div>
+          <div class="amount" id="savingsAmount">0원</div>
+          <div class="caption">월초 선분배</div>
+        </article>
+
+        <article class="summary-card">
+          <div class="label">분배 가능 금액</div>
+          <div class="amount" id="availableAmount">0원</div>
+          <div class="caption">고정지출·저축 제외</div>
+        </article>
+      </div>
+
+      <div class="panel" style="margin-top:12px;">
+        <div class="panel-head">
+          <div>
+            <h3 class="panel-title">이번 달 계산식</h3>
+            <p class="panel-desc">월초에 보고 나눌 금액만 남도록 계산합니다.</p>
+          </div>
+        </div>
+        <div id="formulaBox"></div>
+      </div>
+    </section>
+
+    <section class="section" id="settings">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3 class="panel-title">기준금액</h3>
+            <p class="panel-desc">현재 기본값은 세후 월급 2,482,420원, 저축 1,300,000원입니다.</p>
+          </div>
+        </div>
+        <div class="field-stack">
+          <label>
+            <span class="field-label">이번 달 기준금액</span>
+            <span class="money-input">
+              <input id="incomeInput" inputmode="numeric" type="text" />
+              <span>원</span>
+            </span>
+          </label>
+          <label>
+            <span class="field-label">저축 / 목적자금</span>
+            <span class="money-input">
+              <input id="savingsInput" inputmode="numeric" type="text" />
+              <span>원</span>
+            </span>
+          </label>
+          <button class="primary-btn" id="applyBaseBtn" type="button">기준금액 반영</button>
+        </div>
+      </div>
+
+      <div class="notice">
+        고정지출 납부일은 기억된 정보에 없어서 기본값을 비워두었습니다. 항목을 눌러 납부일을 입력하면 월초 확인용으로 같이 보입니다.
+      </div>
+    </section>
+
+    <section class="section" id="fixed">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3 class="panel-title">고정지출</h3>
+            <p class="panel-desc">기억된 상세 항목 기준 합계가 자동 계산됩니다.</p>
+          </div>
+          <button class="ghost-btn" id="addFixedBtn" type="button">추가</button>
+        </div>
+        <div class="list" id="fixedList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="buckets">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3 class="panel-title">남은 돈 분배</h3>
+            <p class="panel-desc">고정지출과 저축을 뺀 뒤 쓸 돈을 나눕니다.</p>
+          </div>
+          <button class="ghost-btn" id="addBucketBtn" type="button">추가</button>
+        </div>
+        <div class="list" id="bucketList"></div>
+      </div>
+
+      <div class="button-row three">
+        <button class="secondary-btn" id="balanceReserveBtn" type="button">예비비 자동맞춤</button>
+        <button class="secondary-btn" id="clearBucketsBtn" type="button">분배금 비우기</button>
+        <button class="primary-btn" id="saveBtnInline" type="button">이번 달 저장</button>
+      </div>
+    </section>
+
+    <section class="section" id="history">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3 class="panel-title">저장내역</h3>
+            <p class="panel-desc">월별 분배 내역을 불러올 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="list" id="historyList"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom-actions">
+    <button class="secondary-btn" id="quickAddBtn" type="button">항목 추가</button>
+    <button class="primary-btn" id="saveBtn" type="button">분배 저장</button>
+  </div>
+
+  <div class="sheet-backdrop" id="sheetBackdrop" role="dialog" aria-modal="true">
+    <div class="sheet">
+      <div class="sheet-handle"></div>
+      <h2 class="sheet-title" id="sheetTitle">항목 추가</h2>
+      <div class="sheet-form">
+        <label>
+          <span class="field-label">항목명</span>
+          <input id="itemNameInput" type="text" placeholder="예: 통신비" />
+        </label>
+        <label>
+          <span class="field-label">금액</span>
+          <span class="money-input">
+            <input id="itemAmountInput" inputmode="numeric" type="text" placeholder="0" />
+            <span>원</span>
+          </span>
+        </label>
+        <div class="two-col" id="fixedOnlyFields">
+          <label>
+            <span class="field-label">분류</span>
+            <select id="itemCategoryInput">
+              <option value="주거">주거</option>
+              <option value="공과금">공과금</option>
+              <option value="통신">통신</option>
+              <option value="교통">교통</option>
+              <option value="보험">보험</option>
+              <option value="구독">구독</option>
+              <option value="기타">기타</option>
+            </select>
+          </label>
+          <label>
+            <span class="field-label">납부일</span>
+            <input id="itemDueInput" inputmode="numeric" type="text" placeholder="예: 25" />
+          </label>
+        </div>
+      </div>
+      <div class="sheet-actions">
+        <button class="secondary-btn" id="cancelSheetBtn" type="button">취소</button>
+        <button class="primary-btn" id="confirmSheetBtn" type="button">저장</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">저장했습니다.</div>
+
+  <script>
+    const STORAGE_PREFIX = "sol-monthly-distribution-v2:";
+    const ARCHIVE_KEY = "sol-monthly-distribution-v2:index";
+
+    const baseline = {
+      income: 2482420,
+      savings: 1300000,
+      fixedItems: [
+        { id: "rent_interest_1", name: "전세이자①", amount: 33750, category: "주거", dueDay: "" },
+        { id: "rent_interest_2", name: "전세이자②", amount: 182690, category: "주거", dueDay: "" },
+        { id: "transport", name: "교통비", amount: 88000, category: "교통", dueDay: "" },
+        { id: "gas", name: "가스비", amount: 40000, category: "공과금", dueDay: "" },
+        { id: "electric", name: "전기세", amount: 30000, category: "공과금", dueDay: "" },
+        { id: "water", name: "수도세", amount: 20000, category: "공과금", dueDay: "" },
+        { id: "phone", name: "통신비", amount: 72190, category: "통신", dueDay: "" },
+        { id: "insurance", name: "보험료", amount: 47000, category: "보험", dueDay: "" }
+      ],
+      buckets: [
+        { id: "food", name: "식비", amount: 250000 },
+        { id: "life", name: "생활비", amount: 220000 },
+        { id: "cat", name: "고양이비", amount: 150000 },
+        { id: "reserve", name: "예비비", amount: 48790 }
+      ],
+      savedAt: ""
+    };
+
+    let currentMonth = getCurrentMonthKey();
+    let state = loadMonth(currentMonth);
+    let sheetMode = { type: "fixed", id: null };
+
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+
+    const els = {
+      monthLabel: $("#monthLabel"),
+      heroTitle: $("#heroTitle"),
+      heroSub: $("#heroSub"),
+      statusPill: $("#statusPill"),
+      statusText: $("#statusText"),
+      leftoverAmount: $("#leftoverAmount"),
+      leftoverCaption: $("#leftoverCaption"),
+      usedRatio: $("#usedRatio"),
+      usedProgress: $("#usedProgress"),
+      incomeAmount: $("#incomeAmount"),
+      fixedAmount: $("#fixedAmount"),
+      fixedCaption: $("#fixedCaption"),
+      savingsAmount: $("#savingsAmount"),
+      availableAmount: $("#availableAmount"),
+      formulaBox: $("#formulaBox"),
+      incomeInput: $("#incomeInput"),
+      savingsInput: $("#savingsInput"),
+      fixedList: $("#fixedList"),
+      bucketList: $("#bucketList"),
+      historyList: $("#historyList"),
+      sheetBackdrop: $("#sheetBackdrop"),
+      sheetTitle: $("#sheetTitle"),
+      itemNameInput: $("#itemNameInput"),
+      itemAmountInput: $("#itemAmountInput"),
+      itemCategoryInput: $("#itemCategoryInput"),
+      itemDueInput: $("#itemDueInput"),
+      fixedOnlyFields: $("#fixedOnlyFields"),
+      toast: $("#toast")
+    };
+
+    init();
+
+    function init() {
+      bindEvents();
+      render();
+    }
+
+    function bindEvents() {
+      $("#prevMonth").addEventListener("click", () => changeMonth(-1));
+      $("#nextMonth").addEventListener("click", () => changeMonth(1));
+      $("#copyPrevBtn").addEventListener("click", copyPreviousMonth);
+      $("#resetBtn").addEventListener("click", resetToBaseline);
+      $("#applyBaseBtn").addEventListener("click", applyBaseValues);
+      $("#addFixedBtn").addEventListener("click", () => openSheet("fixed"));
+      $("#addBucketBtn").addEventListener("click", () => openSheet("bucket"));
+      $("#quickAddBtn").addEventListener("click", () => openSheet(getActiveTab() === "buckets" ? "bucket" : "fixed"));
+      $("#saveBtn").addEventListener("click", saveCurrentMonth);
+      $("#saveBtnInline").addEventListener("click", saveCurrentMonth);
+      $("#balanceReserveBtn").addEventListener("click", balanceReserve);
+      $("#clearBucketsBtn").addEventListener("click", clearBuckets);
+      $("#cancelSheetBtn").addEventListener("click", closeSheet);
+      $("#confirmSheetBtn").addEventListener("click", confirmSheet);
+      els.sheetBackdrop.addEventListener("click", (event) => {
+        if (event.target === els.sheetBackdrop) closeSheet();
+      });
+
+      ["incomeInput", "savingsInput", "itemAmountInput"].forEach((id) => {
+        const input = $("#" + id);
+        input.addEventListener("input", () => {
+          const clean = onlyDigits(input.value);
+          input.value = clean ? Number(clean).toLocaleString("ko-KR") : "";
+        });
+      });
+
+      $$(".tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          $$(".tab").forEach((t) => t.classList.remove("active"));
+          $$(".section").forEach((s) => s.classList.remove("active"));
+          tab.classList.add("active");
+          $("#" + tab.dataset.tab).classList.add("active");
+          renderHistory();
+        });
+      });
+    }
+
+    function getActiveTab() {
+      return $(".tab.active")?.dataset.tab || "summary";
+    }
+
+    function getCurrentMonthKey() {
+      const now = new Date();
+      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+    }
+
+    function formatMonth(key) {
+      const [year, month] = key.split("-").map(Number);
+      return `${year}년 ${month}월`;
+    }
+
+    function shiftMonth(key, diff) {
+      const [year, month] = key.split("-").map(Number);
+      const date = new Date(year, month - 1 + diff, 1);
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+    }
+
+    function changeMonth(diff) {
+      saveDraftSilently();
+      currentMonth = shiftMonth(currentMonth, diff);
+      state = loadMonth(currentMonth);
+      render();
+      showToast(formatMonth(currentMonth) + "로 이동했어요.");
+    }
+
+    function cloneBase() {
+      return JSON.parse(JSON.stringify(baseline));
+    }
+
+    function loadMonth(monthKey) {
+      try {
+        const saved = localStorage.getItem(STORAGE_PREFIX + monthKey);
+        if (saved) return JSON.parse(saved);
+      } catch (error) {
+        console.warn(error);
+      }
+      return cloneBase();
+    }
+
+    function saveDraftSilently() {
+      try {
+        localStorage.setItem(STORAGE_PREFIX + currentMonth + ":draft", JSON.stringify(state));
+      } catch (error) {
+        console.warn(error);
+      }
+    }
+
+    function saveCurrentMonth() {
+      state.savedAt = new Date().toISOString();
+      localStorage.setItem(STORAGE_PREFIX + currentMonth, JSON.stringify(state));
+      const index = getArchiveIndex();
+      if (!index.includes(currentMonth)) {
+        index.push(currentMonth);
+        index.sort().reverse();
+        localStorage.setItem(ARCHIVE_KEY, JSON.stringify(index));
+      }
+      render();
+      showToast("이번 달 분배 내역을 저장했어요.");
+    }
+
+    function getArchiveIndex() {
+      try {
+        const raw = localStorage.getItem(ARCHIVE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function copyPreviousMonth() {
+      const prevKey = shiftMonth(currentMonth, -1);
+      const saved = localStorage.getItem(STORAGE_PREFIX + prevKey);
+      if (saved) {
+        state = JSON.parse(saved);
+        state.savedAt = "";
+        render();
+        showToast(formatMonth(prevKey) + " 내역을 불러왔어요.");
+        return;
+      }
+      showToast("지난달 저장내역이 없어 기본값을 유지했어요.");
+    }
+
+    function resetToBaseline() {
+      state = cloneBase();
+      render();
+      showToast("기본값으로 되돌렸어요.");
+    }
+
+    function applyBaseValues() {
+      state.income = parseMoney(els.incomeInput.value);
+      state.savings = parseMoney(els.savingsInput.value);
+      render();
+      showToast("기준금액을 반영했어요.");
+    }
+
+    function getTotals() {
+      const fixedTotal = sum(state.fixedItems);
+      const bucketTotal = sum(state.buckets);
+      const usedTotal = fixedTotal + state.savings + bucketTotal;
+      const available = state.income - fixedTotal - state.savings;
+      const leftover = state.income - usedTotal;
+      const ratio = state.income > 0 ? Math.min(999, Math.round((usedTotal / state.income) * 100)) : 0;
+      return { fixedTotal, bucketTotal, usedTotal, available, leftover, ratio };
+    }
+
+    function sum(items) {
+      return items.reduce((total, item) => total + Number(item.amount || 0), 0);
+    }
+
+    function render() {
+      const totals = getTotals();
+      els.monthLabel.textContent = formatMonth(currentMonth);
+      els.heroTitle.textContent = `${formatMonth(currentMonth)} 분배`;
+      els.heroSub.textContent = `고정지출 ${formatWon(totals.fixedTotal)} · 저축 ${formatWon(state.savings)} · 분배 가능 ${formatWon(totals.available)}`;
+
+      els.incomeAmount.textContent = formatWon(state.income);
+      els.fixedAmount.textContent = formatWon(totals.fixedTotal);
+      els.fixedCaption.textContent = `${state.fixedItems.length}개 항목`;
+      els.savingsAmount.textContent = formatWon(state.savings);
+      els.availableAmount.textContent = formatWon(totals.available);
+      els.leftoverAmount.textContent = formatWon(totals.leftover);
+      els.usedRatio.textContent = totals.ratio + "%";
+      els.usedProgress.style.width = Math.min(100, Math.max(0, totals.ratio)) + "%";
+
+      els.incomeInput.value = formatNumber(state.income);
+      els.savingsInput.value = formatNumber(state.savings);
+
+      renderStatus(totals);
+      renderFormula(totals);
+      renderFixedList();
+      renderBucketList();
+      renderHistory();
+    }
+
+    function renderStatus(totals) {
+      const pill = els.statusPill;
+      pill.style.background = "var(--blue-weak)";
+      pill.style.color = "var(--blue)";
+
+      if (totals.leftover < 0) {
+        pill.style.background = "var(--red-weak)";
+        pill.style.color = "var(--red)";
+        els.statusText.textContent = `${formatWon(Math.abs(totals.leftover))} 초과`;
+        els.leftoverCaption.textContent = "분배 금액이 기준금액보다 큽니다. 생활비나 예비비를 조정하세요.";
+        return;
+      }
+
+      if (totals.leftover <= 30000) {
+        pill.style.background = "var(--yellow-weak)";
+        pill.style.color = "var(--yellow)";
+        els.statusText.textContent = "거의 딱 맞음";
+        els.leftoverCaption.textContent = "남는 돈이 적습니다. 예비비를 조금 남겨두는 구성이 안전합니다.";
+        return;
+      }
+
+      pill.style.background = "var(--green-weak)";
+      pill.style.color = "var(--green)";
+      els.statusText.textContent = "분배 가능";
+      els.leftoverCaption.textContent = `${formatWon(totals.leftover)} 여유가 남습니다.`;
+    }
+
+    function renderFormula(totals) {
+      const dangerClass = totals.leftover < 0 ? "danger" : (totals.leftover <= 30000 ? "warning" : "");
+      els.formulaBox.innerHTML = `
+        <div class="notice ${dangerClass}">
+          기준금액 ${formatWon(state.income)} - 고정지출 ${formatWon(totals.fixedTotal)} - 저축 ${formatWon(state.savings)}
+          = 분배 가능 금액 <strong>${formatWon(totals.available)}</strong>
+        </div>
+        <div class="detail-line"><span>분배 항목 합계</span><strong>${formatWon(totals.bucketTotal)}</strong></div>
+        <div class="detail-line"><span>최종 잔액</span><strong>${formatWon(totals.leftover)}</strong></div>
+      `;
+    }
+
+    function renderFixedList() {
+      if (!state.fixedItems.length) {
+        els.fixedList.innerHTML = `<div class="empty">고정지출 항목이 없습니다.<br>추가 버튼으로 항목을 넣어주세요.</div>`;
+        return;
+      }
+
+      els.fixedList.innerHTML = state.fixedItems
+        .map((item) => `
+          <article class="item">
+            <div class="item-icon">${iconForCategory(item.category)}</div>
+            <div class="item-main">
+              <p class="item-name">${escapeHtml(item.name)}</p>
+              <div class="item-meta">
+                <span class="pill">${escapeHtml(item.category || "기타")}</span>
+                <span>${item.dueDay ? `${escapeHtml(item.dueDay)}일 납부` : "납부일 미입력"}</span>
+              </div>
+            </div>
+            <div class="item-amount">${formatWon(item.amount)}</div>
+            <div class="item-actions">
+              <button class="mini-btn" type="button" onclick="openSheet('fixed','${item.id}')">수정</button>
+              <button class="mini-btn danger" type="button" onclick="removeItem('fixed','${item.id}')">삭제</button>
+            </div>
+          </article>
+        `).join("");
+    }
+
+    function renderBucketList() {
+      const totals = getTotals();
+      if (!state.buckets.length) {
+        els.bucketList.innerHTML = `<div class="empty">분배 항목이 없습니다.<br>생활비, 식비, 고양이비 등을 추가하세요.</div>`;
+        return;
+      }
+
+      els.bucketList.innerHTML = `
+        <div class="notice ${totals.leftover < 0 ? "danger" : ""}">
+          분배 가능 금액은 <strong>${formatWon(totals.available)}</strong>이고, 현재 분배 합계는 <strong>${formatWon(totals.bucketTotal)}</strong>입니다.
+        </div>
+        ${state.buckets.map((item) => `
+          <article class="item">
+            <div class="item-icon">₩</div>
+            <div class="item-main">
+              <p class="item-name">${escapeHtml(item.name)}</p>
+              <div class="item-meta">
+                <span class="pill">분배금</span>
+              </div>
+            </div>
+            <div class="item-amount">${formatWon(item.amount)}</div>
+            <div class="item-actions">
+              <button class="mini-btn" type="button" onclick="openSheet('bucket','${item.id}')">수정</button>
+              <button class="mini-btn danger" type="button" onclick="removeItem('bucket','${item.id}')">삭제</button>
+            </div>
+          </article>
+        `).join("")}
+      `;
+    }
+
+    function renderHistory() {
+      const index = getArchiveIndex();
+      if (!index.length) {
+        els.historyList.innerHTML = `<div class="empty">아직 저장된 분배 내역이 없습니다.<br>분배 저장 버튼을 누르면 여기에 표시됩니다.</div>`;
+        return;
+      }
+
+      els.historyList.innerHTML = index.map((key) => {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_PREFIX + key) || "{}");
+        const fixedTotal = sum(saved.fixedItems || []);
+        const bucketTotal = sum(saved.buckets || []);
+        const leftover = Number(saved.income || 0) - fixedTotal - Number(saved.savings || 0) - bucketTotal;
+        return `
+          <article class="history-card">
+            <div>
+              <b>${formatMonth(key)}</b>
+              <span>잔액 ${formatWon(leftover)} · 저장 ${saved.savedAt ? formatSavedDate(saved.savedAt) : "날짜 없음"}</span>
+            </div>
+            <button class="mini-btn" type="button" onclick="loadHistory('${key}')">열기</button>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function openSheet(type, id = null) {
+      sheetMode = { type, id };
+      const isFixed = type === "fixed";
+      const list = isFixed ? state.fixedItems : state.buckets;
+      const item = id ? list.find((x) => x.id === id) : null;
+
+      els.sheetTitle.textContent = `${isFixed ? "고정지출" : "분배 항목"} ${id ? "수정" : "추가"}`;
+      els.fixedOnlyFields.style.display = isFixed ? "grid" : "none";
+      els.itemNameInput.value = item?.name || "";
+      els.itemAmountInput.value = item ? formatNumber(item.amount) : "";
+      els.itemCategoryInput.value = item?.category || "기타";
+      els.itemDueInput.value = item?.dueDay || "";
+      els.sheetBackdrop.classList.add("show");
+      setTimeout(() => els.itemNameInput.focus(), 50);
+    }
+
+    function closeSheet() {
+      els.sheetBackdrop.classList.remove("show");
+    }
+
+    function confirmSheet() {
+      const name = els.itemNameInput.value.trim();
+      const amount = parseMoney(els.itemAmountInput.value);
+      const category = els.itemCategoryInput.value;
+      const dueDay = onlyDigits(els.itemDueInput.value).slice(0, 2);
+
+      if (!name) return showToast("항목명을 입력해주세요.");
+      if (amount < 0) return showToast("금액을 확인해주세요.");
+
+      const target = sheetMode.type === "fixed" ? state.fixedItems : state.buckets;
+      const exists = sheetMode.id ? target.find((x) => x.id === sheetMode.id) : null;
+
+      if (exists) {
+        exists.name = name;
+        exists.amount = amount;
+        if (sheetMode.type === "fixed") {
+          exists.category = category;
+          exists.dueDay = dueDay;
+        }
+      } else {
+        const newItem = { id: makeId(), name, amount };
+        if (sheetMode.type === "fixed") {
+          newItem.category = category;
+          newItem.dueDay = dueDay;
+        }
+        target.push(newItem);
+      }
+
+      closeSheet();
+      render();
+      showToast("항목을 반영했어요.");
+    }
+
+    function removeItem(type, id) {
+      if (type === "fixed") {
+        state.fixedItems = state.fixedItems.filter((item) => item.id !== id);
+      } else {
+        state.buckets = state.buckets.filter((item) => item.id !== id);
+      }
+      render();
+      showToast("항목을 삭제했어요.");
+    }
+
+    function loadHistory(key) {
+      saveDraftSilently();
+      currentMonth = key;
+      state = loadMonth(key);
+      $$(".tab").forEach((t) => t.classList.remove("active"));
+      $$(".section").forEach((s) => s.classList.remove("active"));
+      $(`.tab[data-tab="summary"]`).classList.add("active");
+      $("#summary").classList.add("active");
+      render();
+      showToast(formatMonth(key) + " 내역을 열었어요.");
+    }
+
+    function balanceReserve() {
+      const totals = getTotals();
+      const reserve = state.buckets.find((item) => item.name.includes("예비"));
+      const otherBucketTotal = state.buckets
+        .filter((item) => item !== reserve)
+        .reduce((sum, item) => sum + Number(item.amount || 0), 0);
+      const nextReserve = state.income - totals.fixedTotal - state.savings - otherBucketTotal;
+
+      if (reserve) {
+        reserve.amount = Math.max(0, nextReserve);
+      } else {
+        state.buckets.push({ id: makeId(), name: "예비비", amount: Math.max(0, nextReserve) });
+      }
+
+      render();
+      showToast("남는 금액을 예비비로 맞췄어요.");
+    }
+
+    function clearBuckets() {
+      state.buckets = state.buckets.map((item) => ({ ...item, amount: 0 }));
+      render();
+      showToast("분배금을 0원으로 비웠어요.");
+    }
+
+    function onlyDigits(value) {
+      return String(value || "").replace(/[^\d]/g, "");
+    }
+
+    function parseMoney(value) {
+      const clean = onlyDigits(value);
+      return clean ? Number(clean) : 0;
+    }
+
+    function formatNumber(value) {
+      return Number(value || 0).toLocaleString("ko-KR");
+    }
+
+    function formatWon(value) {
+      const num = Number(value || 0);
+      const sign = num < 0 ? "-" : "";
+      return sign + Math.abs(num).toLocaleString("ko-KR") + "원";
+    }
+
+    function formatSavedDate(iso) {
+      const date = new Date(iso);
+      if (Number.isNaN(date.getTime())) return "날짜 없음";
+      return `${date.getMonth() + 1}/${date.getDate()} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+    }
+
+    function iconForCategory(category) {
+      const map = {
+        "주거": "🏠",
+        "공과금": "💡",
+        "통신": "📱",
+        "교통": "🚇",
+        "보험": "🛡️",
+        "구독": "◌",
+        "기타": "₩"
+      };
+      return map[category] || "₩";
+    }
+
+    function makeId() {
+      return "id_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 8);
+    }
+
+    function showToast(message) {
+      els.toast.textContent = message;
+      els.toast.classList.add("show");
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => els.toast.classList.remove("show"), 1800);
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    window.openSheet = openSheet;
+    window.removeItem = removeItem;
+    window.loadHistory = loadHistory;
+  </script>
+</body>
+</html>

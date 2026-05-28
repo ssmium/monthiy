@@ -10,9 +10,10 @@
 
   <title>월초 고정지출 분배보드</title>
 
-  <!-- iPhone 홈화면 아이콘 / favicon -->
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FBFAF7'/%3E%3Crect x='82' y='92' width='348' height='310' rx='44' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Cpath d='M82 136c0-24 20-44 44-44h260c24 0 44 20 44 44v58H82v-58z' fill='%233182F6'/%3E%3Crect x='148' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='330' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='128' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='280' y='228' width='52' height='40' rx='12' fill='%23DDEBFF'/%3E%3Crect x='128' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Cpath d='M310 246a104 104 0 0 1 90 52l-90 52V246z' fill='%233182F6'/%3E%3Cpath d='M400 298a104 104 0 0 1-38 142l-52-90 90-52z' fill='%2326C6B8'/%3E%3Cpath d='M362 440a104 104 0 0 1-142-38l90-52 52 90z' fill='%23F9C74F'/%3E%3Cpath d='M220 402a104 104 0 0 1 90-156v104l-90 52z' fill='%23FF6B6B'/%3E%3Ccircle cx='174' cy='370' r='58' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Ctext x='174' y='392' text-anchor='middle' font-size='70' font-family='Arial,sans-serif' font-weight='800' fill='%23191F28'%3E₩%3C/text%3E%3C/svg%3E" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FBFAF7'/%3E%3Crect x='82' y='92' width='348' height='310' rx='44' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Cpath d='M82 136c0-24 20-44 44-44h260c24 0 44 20 44 44v58H82v-58z' fill='%233182F6'/%3E%3Crect x='148' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='330' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='128' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='280' y='228' width='52' height='40' rx='12' fill='%23DDEBFF'/%3E%3Crect x='128' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Cpath d='M310 246a104 104 0 0 1 90 52l-90 52V246z' fill='%233182F6'/%3E%3Cpath d='M400 298a104 104 0 0 1-38 142l-52-90 90-52z' fill='%2326C6B8'/%3E%3Cpath d='M362 440a104 104 0 0 1-142-38l90-52 52 90z' fill='%23F9C74F'/%3E%3Cpath d='M220 402a104 104 0 0 1 90-156v104l-90 52z' fill='%23FF6B6B'/%3E%3Ccircle cx='174' cy='370' r='58' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Ctext x='174' y='392' text-anchor='middle' font-size='70' font-family='Arial,sans-serif' font-weight='800' fill='%23191F28'%3E₩%3C/text%3E%3C/svg%3E" />
+  <!-- iPhone 홈화면 아이콘 / favicon: app-icon.png 파일을 index.html과 같은 위치에 업로드하세요 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./app-icon.png?v=5" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./app-icon.png?v=5" />
+  <link rel="shortcut icon" href="./app-icon.png?v=5" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" />
 
@@ -40,7 +41,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       min-height: 100%;
       background:
@@ -52,7 +54,9 @@
       word-break: keep-all;
     }
 
-    button, input {
+    button,
+    input,
+    select {
       font: inherit;
     }
 
@@ -62,7 +66,8 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    input {
+    input,
+    select {
       width: 100%;
       border: 1px solid var(--line);
       background: #F8FAFC;
@@ -73,7 +78,8 @@
       font-weight: 800;
     }
 
-    input:focus {
+    input:focus,
+    select:focus {
       border-color: rgba(49,130,246,.45);
       background: #fff;
       box-shadow: 0 0 0 4px rgba(49,130,246,.10);
@@ -106,13 +112,15 @@
       min-width: 0;
     }
 
+    /* 화면 상단 왼쪽 앱 아이콘: app-icon.png 그대로 표시 */
     .app-icon {
       width: 42px;
       height: 42px;
       border-radius: 14px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23FBFAF7'/%3E%3Crect x='82' y='92' width='348' height='310' rx='44' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Cpath d='M82 136c0-24 20-44 44-44h260c24 0 44 20 44 44v58H82v-58z' fill='%233182F6'/%3E%3Crect x='148' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='330' y='62' width='34' height='92' rx='17' fill='%23191F28'/%3E%3Crect x='128' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='228' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='280' y='228' width='52' height='40' rx='12' fill='%23DDEBFF'/%3E%3Crect x='128' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Crect x='204' y='292' width='52' height='40' rx='12' fill='%23E9EEF5'/%3E%3Cpath d='M310 246a104 104 0 0 1 90 52l-90 52V246z' fill='%233182F6'/%3E%3Cpath d='M400 298a104 104 0 0 1-38 142l-52-90 90-52z' fill='%2326C6B8'/%3E%3Cpath d='M362 440a104 104 0 0 1-142-38l90-52 52 90z' fill='%23F9C74F'/%3E%3Cpath d='M220 402a104 104 0 0 1 90-156v104l-90 52z' fill='%23FF6B6B'/%3E%3Ccircle cx='174' cy='370' r='58' fill='%23fff' stroke='%23E5E8EC' stroke-width='8'/%3E%3Ctext x='174' y='392' text-anchor='middle' font-size='70' font-family='Arial,sans-serif' font-weight='800' fill='%23191F28'%3E₩%3C/text%3E%3C/svg%3E");
+      background-image: url("./app-icon.png?v=5");
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       box-shadow: 0 10px 20px rgba(49,130,246,.18);
       flex: 0 0 auto;
     }
@@ -421,6 +429,7 @@
 
     .money-input {
       position: relative;
+      display: block;
     }
 
     .money-input input {
@@ -723,11 +732,11 @@
       <section class="month-card">
         <div class="month-row">
           <div class="month-nav">
-            <button class="round-btn" id="prevMonth">‹</button>
+            <button class="round-btn" id="prevMonth" type="button">‹</button>
             <div class="month-label" id="monthLabel">2026년 5월</div>
-            <button class="round-btn" id="nextMonth">›</button>
+            <button class="round-btn" id="nextMonth" type="button">›</button>
           </div>
-          <button class="ghost-btn" id="loadPrevBtn">지난달 불러오기</button>
+          <button class="ghost-btn" id="loadPrevBtn" type="button">지난달 불러오기</button>
         </div>
 
         <h2 class="hero-title" id="heroTitle">2026년 5월 분배</h2>
@@ -740,11 +749,11 @@
       </section>
 
       <nav class="tabs" aria-label="분배보드 탭">
-        <button class="tab active" data-tab="summary">요약</button>
-        <button class="tab" data-tab="base">기준금액</button>
-        <button class="tab" data-tab="fixed">고정지출</button>
-        <button class="tab" data-tab="plans">분배</button>
-        <button class="tab" data-tab="history">저장내역</button>
+        <button class="tab active" data-tab="summary" type="button">요약</button>
+        <button class="tab" data-tab="base" type="button">기준금액</button>
+        <button class="tab" data-tab="fixed" type="button">고정지출</button>
+        <button class="tab" data-tab="plans" type="button">분배</button>
+        <button class="tab" data-tab="history" type="button">저장내역</button>
       </nav>
 
       <section class="section active" id="summary">
@@ -845,8 +854,8 @@
         </article>
 
         <div class="button-row">
-          <button class="secondary-btn" id="autoBalanceBtn">예비비 자동맞춤</button>
-          <button class="secondary-btn" id="clearPlansBtn">분배 0원 처리</button>
+          <button class="secondary-btn" id="autoBalanceBtn" type="button">예비비 자동맞춤</button>
+          <button class="secondary-btn" id="clearPlansBtn" type="button">분배 0원 처리</button>
         </div>
       </section>
 
@@ -865,8 +874,8 @@
   </div>
 
   <div class="bottom-actions">
-    <button class="secondary-btn" id="addBtn">항목 추가</button>
-    <button class="primary-btn" id="saveBtn">분배 저장</button>
+    <button class="secondary-btn" id="addBtn" type="button">항목 추가</button>
+    <button class="primary-btn" id="saveBtn" type="button">분배 저장</button>
   </div>
 
   <div class="sheet-backdrop" id="sheetBackdrop">
@@ -877,7 +886,7 @@
       <div class="field-stack">
         <label>
           <span class="field-label">구분</span>
-          <select id="itemType" style="width:100%; border:1px solid var(--line); background:#F8FAFC; border-radius:18px; padding:15px 14px; color:var(--ink); outline:none; font-weight:800;">
+          <select id="itemType">
             <option value="fixed">고정지출</option>
             <option value="plans">분배</option>
           </select>
@@ -902,11 +911,11 @@
         </label>
 
         <div class="button-row">
-          <button class="secondary-btn" id="cancelSheetBtn">취소</button>
-          <button class="primary-btn" id="submitSheetBtn">저장</button>
+          <button class="secondary-btn" id="cancelSheetBtn" type="button">취소</button>
+          <button class="primary-btn" id="submitSheetBtn" type="button">저장</button>
         </div>
 
-        <button class="danger-btn" id="deleteSheetBtn" style="display:none;">삭제</button>
+        <button class="danger-btn" id="deleteSheetBtn" type="button" style="display:none;">삭제</button>
       </div>
     </div>
   </div>
@@ -914,26 +923,33 @@
   <div class="toast" id="toast">저장했어요</div>
 
   <script>
-    const STORAGE_KEY = "monthly-distribution-board-v1";
+    const STORAGE_KEY = "monthly-distribution-board-v2";
+
+    const uid = () => {
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+      return "id-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2);
+    };
+
+    const clone = (value) => JSON.parse(JSON.stringify(value));
 
     const defaultData = {
       income: 2482420,
       saving: 1300000,
       fixed: [
-        { id: crypto.randomUUID(), name: "전세이자①", amount: 33750, due: 1 },
-        { id: crypto.randomUUID(), name: "전세이자②", amount: 182690, due: 1 },
-        { id: crypto.randomUUID(), name: "교통비", amount: 88000, due: 1 },
-        { id: crypto.randomUUID(), name: "가스비", amount: 40000, due: 10 },
-        { id: crypto.randomUUID(), name: "전기세", amount: 30000, due: 10 },
-        { id: crypto.randomUUID(), name: "수도세", amount: 20000, due: 10 },
-        { id: crypto.randomUUID(), name: "통신비", amount: 72190, due: 15 },
-        { id: crypto.randomUUID(), name: "보험료", amount: 47000, due: 20 }
+        { id: uid(), name: "전세이자①", amount: 33750, due: 1 },
+        { id: uid(), name: "전세이자②", amount: 182690, due: 1 },
+        { id: uid(), name: "교통비", amount: 88000, due: 1 },
+        { id: uid(), name: "가스비", amount: 40000, due: 10 },
+        { id: uid(), name: "전기세", amount: 30000, due: 10 },
+        { id: uid(), name: "수도세", amount: 20000, due: 10 },
+        { id: uid(), name: "통신비", amount: 72190, due: 15 },
+        { id: uid(), name: "보험료", amount: 47000, due: 20 }
       ],
       plans: [
-        { id: crypto.randomUUID(), name: "식비", amount: 250000 },
-        { id: crypto.randomUUID(), name: "생활비", amount: 220000 },
-        { id: crypto.randomUUID(), name: "고양이비", amount: 150000 },
-        { id: crypto.randomUUID(), name: "예비비", amount: 48790 }
+        { id: uid(), name: "식비", amount: 250000 },
+        { id: uid(), name: "생활비", amount: 220000 },
+        { id: uid(), name: "고양이비", amount: 150000 },
+        { id: uid(), name: "예비비", amount: 48790 }
       ],
       saved: {}
     };
@@ -949,17 +965,18 @@
     function loadState() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return structuredClone(defaultData);
+        if (!raw) return clone(defaultData);
         const parsed = JSON.parse(raw);
+
         return {
-          ...structuredClone(defaultData),
+          ...clone(defaultData),
           ...parsed,
-          fixed: parsed.fixed || structuredClone(defaultData.fixed),
-          plans: parsed.plans || structuredClone(defaultData.plans),
+          fixed: parsed.fixed || clone(defaultData.fixed),
+          plans: parsed.plans || clone(defaultData.plans),
           saved: parsed.saved || {}
         };
       } catch {
-        return structuredClone(defaultData);
+        return clone(defaultData);
       }
     }
 
@@ -976,7 +993,10 @@
       const planTotal = sum(state.plans);
       const available = state.income - state.saving - fixedTotal;
       const remaining = available - planTotal;
-      const usage = available > 0 ? Math.min(100, Math.max(0, Math.round((planTotal / available) * 100))) : 0;
+      const usage = available > 0
+        ? Math.min(100, Math.max(0, Math.round((planTotal / available) * 100)))
+        : 0;
+
       return { fixedTotal, planTotal, available, remaining, usage };
     }
 
@@ -1000,7 +1020,6 @@
     }
 
     function render() {
-      const key = monthKey();
       const year = currentDate.getFullYear();
       const month = currentDate.getMonth() + 1;
       const { fixedTotal, planTotal, available, remaining, usage } = calc();
@@ -1059,14 +1078,14 @@
         div.innerHTML = `
           <div class="item-icon">${type === "fixed" ? "고" : "분"}</div>
           <div class="item-main">
-            <p class="item-name">${item.name}</p>
+            <p class="item-name">${escapeHtml(item.name)}</p>
             <div class="item-meta">
               ${type === "fixed" ? `<span>매월 ${item.due || "-"}일</span>` : `<span>월초 분배</span>`}
             </div>
           </div>
           <div class="item-amount">${money(item.amount)}</div>
           <div class="item-actions">
-            <button class="mini-btn" data-edit="${item.id}" data-type="${type}">수정</button>
+            <button class="mini-btn" data-edit="${item.id}" data-type="${type}" type="button">수정</button>
           </div>
         `;
         target.appendChild(div);
@@ -1114,7 +1133,7 @@
 
       $("sheetTitle").textContent = id ? "항목 수정" : "항목 추가";
       $("itemType").value = type;
-      $("itemType").disabled = !!id;
+      $("itemType").disabled = Boolean(id);
       $("itemName").value = item?.name || "";
       $("itemAmount").value = item ? formatInputValue(item.amount) : "";
       $("itemDue").value = item?.due || "";
@@ -1126,6 +1145,7 @@
     function closeSheet() {
       $("sheetBackdrop").classList.remove("show");
       editTarget = null;
+      $("itemType").disabled = false;
     }
 
     function toast(message) {
@@ -1156,7 +1176,7 @@
           if (type === "fixed") item.due = due;
         }
       } else {
-        const newItem = { id: crypto.randomUUID(), name, amount };
+        const newItem = { id: uid(), name, amount };
         if (type === "fixed") newItem.due = due;
         list.push(newItem);
       }
@@ -1169,8 +1189,10 @@
 
     function deleteItemFromSheet() {
       if (!editTarget?.id) return;
+
       const list = editTarget.type === "fixed" ? state.fixed : state.plans;
       const index = list.findIndex((v) => v.id === editTarget.id);
+
       if (index >= 0) list.splice(index, 1);
 
       saveState();
@@ -1181,17 +1203,19 @@
 
     function saveMonth() {
       const { fixedTotal, planTotal, available, remaining } = calc();
+
       state.saved[monthKey()] = {
         income: state.income,
         saving: state.saving,
-        fixed: structuredClone(state.fixed),
-        plans: structuredClone(state.plans),
+        fixed: clone(state.fixed),
+        plans: clone(state.plans),
         fixedTotal,
         planTotal,
         available,
         remaining,
         savedAt: new Date().toISOString()
       };
+
       saveState();
       render();
       toast("이번 달 분배를 저장했어요");
@@ -1200,6 +1224,7 @@
     function loadPrevMonth() {
       const prev = new Date(currentDate);
       prev.setMonth(prev.getMonth() - 1);
+
       const key = `${prev.getFullYear()}-${String(prev.getMonth() + 1).padStart(2, "0")}`;
       const saved = state.saved[key];
 
@@ -1210,8 +1235,9 @@
 
       state.income = saved.income;
       state.saving = saved.saving;
-      state.fixed = structuredClone(saved.fixed);
-      state.plans = structuredClone(saved.plans);
+      state.fixed = clone(saved.fixed);
+      state.plans = clone(saved.plans);
+
       saveState();
       render();
       toast("지난달 항목을 불러왔어요");
@@ -1227,7 +1253,7 @@
       if (reserve) {
         reserve.amount = balanced;
       } else {
-        state.plans.push({ id: crypto.randomUUID(), name: "예비비", amount: balanced });
+        state.plans.push({ id: uid(), name: "예비비", amount: balanced });
       }
 
       saveState();
@@ -1237,12 +1263,23 @@
 
     function resetDefault() {
       if (!confirm("기본값으로 초기화할까요? 저장내역은 유지됩니다.")) return;
+
       const saved = state.saved;
-      state = structuredClone(defaultData);
+      state = clone(defaultData);
       state.saved = saved;
+
       saveState();
       render();
       toast("기본값으로 초기화했어요");
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
 
     document.querySelectorAll(".tab").forEach((tab) => {
@@ -1279,6 +1316,7 @@
 
     $("clearPlansBtn").addEventListener("click", () => {
       if (!confirm("분배 항목 금액을 모두 0원으로 바꿀까요?")) return;
+
       state.plans.forEach((item) => item.amount = 0);
       saveState();
       render();
